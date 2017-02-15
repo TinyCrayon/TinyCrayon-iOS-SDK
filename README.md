@@ -1,5 +1,5 @@
-# TCMask-iOS
-TCMask is an easy way to create a UIViewController for interactive image cutout and masking.
+# TinyCrayon
+TinyCrayon is an easy way to create a UIViewController for interactive image cutout and masking.
 
 # Downloads
 Please check out our [releases](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases)
