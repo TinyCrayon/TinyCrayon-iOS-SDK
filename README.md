@@ -3,12 +3,12 @@
 ## Overview
 TinyCrayon SDK provides tools for adding image layer mask capabilities to your mobile applications.
 
-Image layer mask is a fundamental technique in image manipulations. It allows you to selectively modify the opacity (transparency) of the layer they belong to. This differs from the use of the layer Opacity slider as a mask has the ability to selectively modify the opacity of different areas across a single layer.
+Image layer mask is a fundamental technique in image manipulations. It allows you to selectively modify the opacity (transparency) of the layer they belong to. This flexibility to define the opacity of different areas of a layer is the basis for more interesting image manipulation techniques such as selective coloring and luminosity masking.
 
 The current version of TinyCrayon SDK provides the following three tools:
 * Quick Select: Smart and easy to use, you just need to select part of the object and the edge detection algorithm will find the boundary for you.
-* Hair Brush: Smooth and natual, paint on the hair or fur of an object and the algorithm will select the hair or bur for you in high quality.
-* Regular Brush: A regular brush with the capability to adjust its size, hardness and opacity.
+* Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
+* Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
@@ -19,7 +19,7 @@ The current version of TinyCrayon SDK provides the following three tools:
 
 ## Installation
 ### Streamlined, using CocoaPods
-TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, [this Getting Started Guide will help you](https://guides.cocoapods.org/using/getting-started.html). CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.
+TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, this [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) will help you. CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.
 
 **Important:** Please make sure that you have a CocoaPods version >= 0.39.0 installed. You can check your version of CocoaPods with `pod --version`.
 
@@ -49,6 +49,10 @@ If you don't want to use Cocoapods you can still take advantage of the TinyCrayo
 
 ![Add the framework](https://cloud.githubusercontent.com/assets/4088232/23100618/eef29a52-f6c0-11e6-85ec-a0ea86979cbf.png)
 
+### Settings for Objective-C
+
+If your project is using Objective-C, set `Always Embed Swift Standard Libraries` to be YES in your Build Settings.
+
 ## Usage
 
 ### Add a TCMaskView
@@ -73,14 +77,27 @@ The delegate of the `TCMaskView` can be used to be notified when the user cancel
 
 ### TCMask class
 
-TCMask is provided by `TCMaskViewDelegate` functions as the first parameter when the user cancels or completes the edit.
+`TCMask` is provided by `TCMaskViewDelegate` functions as the first parameter when the user cancels or completes the edit. For example, when the user completes the edit with `TCMaskView`:
 
-TCMask is an encapsulation of image masking result from TCMaskView, it has the following properties:
+*swift*
+```
+func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {
 
-* data: An array if 8-bits unsigned char, its length is equal to the number of pixels of the image in TCMaskView. Each element in data represents the mask value.
-* size: The size of mask, which is equal to the size of the image in TCMaskView
+}
+```
+*Objective-C*
+```
+- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {
 
-TCMask also provides some simple and easy to use functions to process layer mask with image. For example, to cutout an object:
+}
+```
+
+`TCMask` is an encapsulation of image masking result from `TCMaskView`, it has the following properties:
+
+* data: An array of 8-bits unsigned char, its length is equal to the number of pixels of the image in `TCMaskView`. Each element in data represents the mask value.
+* size: The size of mask, which is equal to the size of the image in `TCMaskView`.
+
+`TCMask` also provides some simple and easy to use functions to process layer mask with image. For example, to cutout an object:
 
 *Swift*
 ```
@@ -94,7 +111,7 @@ UIImage *outputImage = [mask cutoutWithImage:image resize:false];
 To try these examples, and find out about more options please take a look at the [Examples](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases).
 
 ## Further reading
-* Try our example app [Image Eraser](https://itunes.apple.com/app/id1072712460).
+* Try our sample app [Image Eraser](https://itunes.apple.com/app/id1072712460).
 * Check out TinyCrayon [guides](http://tinycrayon.com/guides-iOS/get-started.html) and [API reference](http://tinycrayon.com/docs-iOS/index.html) for more details.
 
 ## License
