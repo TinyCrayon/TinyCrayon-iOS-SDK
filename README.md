@@ -51,6 +51,48 @@ If you don't want to use Cocoapods you can still take advantage of the TinyCrayo
 
 ## Usage
 
+### Add a TCMaskView
+
+The `TCMaskView` class is responsible to create a `UIViewController` for the user to mask the image.
+To present a `TCMaskView`:
+
+*Swift*
+```
+let maskView = TCMaskView(image: image)
+maskView.delegate = self
+maskView.presentFrom(rootViewController: self, animated: true)
+```
+*Objective-C*
+```
+TCMaskView *maskView = [[TCMaskView alloc] initWithImage:image];
+maskView.delegate = self;
+[maskView presentFromRootViewController:self animated:true];
+```
+
+The delegate of the `TCMaskView` can be used to be notified when the user cancels or completes the edit. In last case the function `tcMaskViewDidComplete(mask:image:)` is called. 
+
+### TCMask class
+
+TCMask is provided by `TCMaskViewDelegate` functions as the first parameter when the user cancels or completes the edit.
+
+TCMask is an encapsulation of image masking result from TCMaskView, it has the following properties:
+
+* data: An array if 8-bits unsigned char, its length is equal to the number of pixels of the image in TCMaskView. Each element in data represents the mask value.
+* size: The size of mask, which is equal to the size of the image in TCMaskView
+
+TCMask also provides some simple and easy to use functions to process layer mask with image. For example, to cutout an object:
+
+*Swift*
+```
+let outputImage = mask.cutout(image: image, resize: false)
+```
+*Objective-C*
+```
+UIImage *outputImage = [mask cutoutWithImage:image resize:false];
+```
+
+To try these examples, and find out about more options please take a look at the [Examples](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases).
+
 ## Further reading
 * Try our example app [Image Eraser](https://itunes.apple.com/app/id1072712460).
 * Check out TinyCrayon [guides](http://tinycrayon.com/guides-iOS/get-started.html) and [API reference](http://tinycrayon.com/docs-iOS/index.html) for more details.
