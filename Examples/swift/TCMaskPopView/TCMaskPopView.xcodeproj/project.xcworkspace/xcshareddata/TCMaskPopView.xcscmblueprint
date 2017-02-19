@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4CB2ABD2473AC28E8BB8A99897752DD3F1728F2E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "55902D36313B8085CBD4C332A2A95BF55AD92903" : 9223372036854775807,
+    "4CB2ABD2473AC28E8BB8A99897752DD3F1728F2E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DB9AF9AB-D5CC-4E80-8339-830A9AE92712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "55902D36313B8085CBD4C332A2A95BF55AD92903" : "TinyCrayon\/",
+    "4CB2ABD2473AC28E8BB8A99897752DD3F1728F2E" : "TCMask-iOS-Examples\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TCMaskPopView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "swift\/TCMaskPopView\/TCMaskPopView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TinyCrayon\/TCMask-iOS-Examples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CB2ABD2473AC28E8BB8A99897752DD3F1728F2E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:zengxinzhy\/TinyCrayon.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "55902D36313B8085CBD4C332A2A95BF55AD92903"
+    }
+  ]
+}
