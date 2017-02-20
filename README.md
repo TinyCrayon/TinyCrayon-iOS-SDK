@@ -40,7 +40,6 @@ If you don't want to use Cocoapods you can still take advantage of the TinyCrayo
 
 1. Download the [TinyCrayon SDK zip](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases/download/v1.0.0/TinyCrayon.zip) (this is a ~20MB file and may take some time).
 2. Unzip the TinyCrayon.zip
-3. Add the [`ObjC` linker flag](https://developer.apple.com/library/content/qa/qa1490/_index.html) in your `Other Linker Settings` in your target's build settings.
 
 #### Add the framework
 
@@ -81,15 +80,11 @@ The delegate of the `TCMaskView` can be used to be notified when the user cancel
 
 *swift*
 ```
-func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {
-
-}
+func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {}
 ```
 *Objective-C*
 ```
-- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {
-
-}
+- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {}
 ```
 
 `TCMask` is an encapsulation of image masking result from `TCMaskView`, it has the following properties:
