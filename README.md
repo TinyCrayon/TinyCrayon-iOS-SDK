@@ -10,6 +10,10 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
+![Quick Select Demo](https://cloud.githubusercontent.com/assets/4088232/23132020/3319c514-f7c7-11e6-84b3-117949b28b91.gif) | ![Quick Select Demo](https://cloud.githubusercontent.com/assets/4088232/23131889/bb2ab39c-f7c6-11e6-935d-733a6a65080b.gif)
+------------ | -------------
+Quick Select Demo | Hair Brush Demo
+
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
 * iPad support: TinyCrayon SDK uses auto layout for its views and adapts to each screen size - iPhone or iPad.
