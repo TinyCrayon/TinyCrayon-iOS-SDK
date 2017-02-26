@@ -42,7 +42,7 @@ If you don't want to use Cocoapods you can still take advantage of the TinyCrayo
 
 #### Download the SDK
 
-1. Download the [TinyCrayon SDK zip](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases/download/v1.0.0/TinyCrayon.zip) (this is a ~20MB file and may take some time).
+1. Download the [TinyCrayon SDK zip](https://www.tinycrayon.com/sdk/ios/TinyCrayon_v1.0.1.zip) (this is a ~20MB file and may take some time).
 2. Unzip the TinyCrayon.zip
 
 #### Add the framework
