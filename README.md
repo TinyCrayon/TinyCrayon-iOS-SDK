@@ -10,6 +10,10 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
+![Quick Select Demo](https://cloud.githubusercontent.com/assets/4088232/23132020/3319c514-f7c7-11e6-84b3-117949b28b91.gif) | ![Quick Select Demo](https://cloud.githubusercontent.com/assets/4088232/23131889/bb2ab39c-f7c6-11e6-935d-733a6a65080b.gif)
+------------ | -------------
+Quick Select Demo | Hair Brush Demo
+
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
 * iPad support: TinyCrayon SDK uses auto layout for its views and adapts to each screen size - iPhone or iPad.
@@ -18,6 +22,12 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Objective-C support: All of our public API is Objective-C compatible.
 
 ## Installation
+
+### Prerequisites
+* Xcode 8.0 or later.
+* A physical iOS device.
+* Recommended: [installation of CocoaPods](http://guides.cocoapods.org/using/getting-started) to simplify dependency management
+
 ### Streamlined, using CocoaPods
 TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, this [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) will help you. CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.
 
@@ -38,9 +48,8 @@ If you don't want to use Cocoapods you can still take advantage of the TinyCrayo
 
 #### Download the SDK
 
-1. Download the [TinyCrayon SDK zip](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases/download/v1.0.0/TinyCrayon.zip) (this is a ~20MB file and may take some time).
+1. Download the [TinyCrayon SDK zip](https://www.tinycrayon.com/sdk/iOS/TinyCrayon_v1.0.1.zip) (this is a ~20MB file and may take some time).
 2. Unzip the TinyCrayon.zip
-3. Add the [`ObjC` linker flag](https://developer.apple.com/library/content/qa/qa1490/_index.html) in your `Other Linker Settings` in your target's build settings.
 
 #### Add the framework
 
@@ -81,15 +90,11 @@ The delegate of the `TCMaskView` can be used to be notified when the user cancel
 
 *swift*
 ```
-func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {
-
-}
+func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {}
 ```
 *Objective-C*
 ```
-- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {
-
-}
+- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {}
 ```
 
 `TCMask` is an encapsulation of image masking result from `TCMaskView`, it has the following properties:
