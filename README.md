@@ -22,6 +22,12 @@ Quick Select Demo | Hair Brush Demo
 * Objective-C support: All of our public API is Objective-C compatible.
 
 ## Installation
+
+### Prerequisites
+* Xcode 8.0 or later.
+* A physical iOS device.
+* Recommended: [installation of CocoaPods](http://guides.cocoapods.org/using/getting-started) to simplify dependency management
+
 ### Streamlined, using CocoaPods
 TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, this [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) will help you. CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.
 
