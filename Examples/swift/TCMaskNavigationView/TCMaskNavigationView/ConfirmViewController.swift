@@ -36,7 +36,7 @@ class ConfirmViewController : UIViewController {
         var x:CGFloat, y:CGFloat, width:CGFloat, height:CGFloat
         if (image.size.width > image.size.height) {
             width = self.view.frame.width
-            heipght = width * image.size.height / image.size.width
+            height = width * image.size.height / image.size.width
             x = 0
             y = (width - height) / 2
         }

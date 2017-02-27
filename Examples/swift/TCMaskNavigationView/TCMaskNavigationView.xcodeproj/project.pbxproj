@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751A7EEA1E6425DC00C449C5 /* TCMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751A7EE71E6425D400C449C5 /* TCMask.framework */; };
+		751A7EEB1E6425DC00C449C5 /* TCMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 751A7EE71E6425D400C449C5 /* TCMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75A0A6E71E2463B5005B36B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A0A6E61E2463B5005B36B7 /* AppDelegate.swift */; };
 		75A0A6EC1E2463B5005B36B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A0A6EA1E2463B5005B36B7 /* Main.storyboard */; };
 		75A0A6EE1E2463B5005B36B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A0A6ED1E2463B5005B36B7 /* Assets.xcassets */; };
@@ -15,7 +17,22 @@
 		75A0A6FC1E246852005B36B7 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A0A6FB1E246852005B36B7 /* ConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		751A7EEC1E6425DC00C449C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				751A7EEB1E6425DC00C449C5 /* TCMask.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		751A7EE71E6425D400C449C5 /* TCMask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCMask.framework; path = "/Users/xinzeng/Desktop/TinyCrayon-iOS-SDK/Examples/swift/TCMaskNavigationView/TCMask.framework"; sourceTree = "<absolute>"; };
 		75A0A6E31E2463B5005B36B7 /* TCMaskNavigationView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMaskNavigationView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A0A6E61E2463B5005B36B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A0A6EB1E2463B5005B36B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751A7EEA1E6425DC00C449C5 /* TCMask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 				75A0A6DF1E2463B5005B36B7 /* Sources */,
 				75A0A6E01E2463B5005B36B7 /* Frameworks */,
 				75A0A6E11E2463B5005B36B7 /* Resources */,
+				751A7EEC1E6425DC00C449C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

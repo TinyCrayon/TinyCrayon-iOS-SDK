@@ -32,7 +32,7 @@ class MainViewController : UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func selectImageButtonTapped(_ sender: Any) {
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         imagePicker.delegate = self
-        self.present(imageiPicker, animated: true, completion: nil)
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
