@@ -33,15 +33,17 @@ TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, this [Get
 
 **Important:** Please make sure that you have a CocoaPods version >= 0.39.0 installed. You can check your version of CocoaPods with `pod --version`.
 
-Here's what you have to add to your `Podfile`:
+Here's what you have to add to your `Podfile` (if you do not have `Podfile`, create one in your project root directory):
 
 ```
-use_frameworks!
-
-pod 'TinyCrayon'
+target 'MyApp' do
+  pod 'TinyCrayon'
+end
 ```
 
-Then run `pod install`.
+Then run `pod install` in your project root directory (same directory as your `Podfile`).
+
+Open MyApp.xcworkspace and build.
 
 ### Manually, using the SDK download
 If you don't want to use Cocoapods you can still take advantage of the TinyCrayon SDK by importing the frameworks directly.
