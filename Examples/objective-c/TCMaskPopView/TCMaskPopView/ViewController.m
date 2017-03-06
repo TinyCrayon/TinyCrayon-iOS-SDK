@@ -44,8 +44,8 @@
     [maskView presentFromRootViewController:self animated:true];
 }
 
-- (void)tcMaskViewDidCompleteWithImage:(UIImage *)image mask:(TCMask *)mask {
-    _imageView.image = [mask cutoutImageWithImage:image resize:true];
+- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {
+    _imageView.image = [mask cutoutWithImage:image resize:true];
 }
 
 @end

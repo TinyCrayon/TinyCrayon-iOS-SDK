@@ -55,7 +55,7 @@
 - (UIViewController *)tcMaskViewWillPushViewControllerWithMask:(TCMask *)mask image:(UIImage *)image {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ConfirmViewController *controller = [storyBoard instantiateViewControllerWithIdentifier:@"confirmViewController"];
-    controller.image = image;
+    controller.image = [mask cutoutWithImage:image resize:true];
     return controller;
 }
 

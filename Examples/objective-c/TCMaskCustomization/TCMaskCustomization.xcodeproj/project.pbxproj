@@ -16,19 +16,6 @@
 		750E147E1E51DD410057E0D0 /* Balloon.JPEG in Resources */ = {isa = PBXBuildFile; fileRef = 750E147D1E51DD410057E0D0 /* Balloon.JPEG */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		75F7B2281E6D2D4500A8774F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		750E145C1E51DB780057E0D0 /* TCMaskCustomization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMaskCustomization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750E14601E51DB780057E0D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,7 +92,6 @@
 				750E14581E51DB780057E0D0 /* Sources */,
 				750E14591E51DB780057E0D0 /* Frameworks */,
 				750E145A1E51DB780057E0D0 /* Resources */,
-				75F7B2281E6D2D4500A8774F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
