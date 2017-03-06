@@ -15,6 +15,19 @@
 		750E13E01E5177060057E0D0 /* Balloon.JPEG in Resources */ = {isa = PBXBuildFile; fileRef = 750E13DF1E5177060057E0D0 /* Balloon.JPEG */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		75F7B21E1E6D21E600A8774F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		750E13CA1E5176A00057E0D0 /* TCMaskCustomization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMaskCustomization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750E13CD1E5176A00057E0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +90,7 @@
 				750E13C61E5176A00057E0D0 /* Sources */,
 				750E13C71E5176A00057E0D0 /* Frameworks */,
 				750E13C81E5176A00057E0D0 /* Resources */,
+				75F7B21E1E6D21E600A8774F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +323,7 @@
 				750E13DE1E5176A00057E0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

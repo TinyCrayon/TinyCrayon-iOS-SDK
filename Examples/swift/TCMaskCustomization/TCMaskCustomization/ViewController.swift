@@ -45,33 +45,20 @@ class ViewController: UIViewController, TCMaskViewDelegate {
         maskView.delegate = self
         
         // Change status bar style
-        maskView.statusBarStyle = UIStatusBarStyle.default
+        maskView.statusBarStyle = UIStatusBarStyle.lightContent
         
         // Change UI components style
-        let tintColor = UIColor(red: 0, green: 122.0/255.0, blue: 1, alpha: 1)
-        maskView.topBar.backgroundColor = UIColor(white: 247.0/255.0, alpha: 1)
-        maskView.topBar.tintColor = tintColor
+        maskView.topBar.backgroundColor = UIColor(white: 0.1, alpha: 1)
+        maskView.topBar.tintColor = UIColor.white
         
-        maskView.imageView.backgroundColor = UIColor(white: 231.0/255.0, alpha: 1)
-        maskView.imageView.tintColor = tintColor
+        maskView.imageView.backgroundColor = UIColor(white: 0.2, alpha: 1)
         
-        maskView.toolPanel.backgroundColor = UIColor.white
-        maskView.toolPanel.tintColor = tintColor
-        maskView.toolPanel.highlightedColor = UIColor(white: 231.0/255.0, alpha: 1)
-        maskView.toolPanel.textColor = tintColor
+        maskView.bottomBar.backgroundColor = UIColor(white: 0.1, alpha: 1)
+        maskView.bottomBar.tintColor = UIColor.white
+        maskView.bottomBar.textColor = UIColor.white
         
-        maskView.bottomBar.backgroundColor = UIColor(white: 247.0/255.0, alpha: 1)
-        maskView.bottomBar.tintColor = tintColor
-        maskView.bottomBar.textColor = tintColor
-        maskView.bottomBar.highlightedColor = UIColor.white
-        
-        maskView.settingView.backgroundColor = UIColor.white
-        maskView.settingView.tintColor = tintColor
-        maskView.settingView.textColor = UIColor.black
-        
-        maskView.settingViewTopBar.backgroundColor = UIColor(white: 247.0/255.0, alpha: 1)
-        maskView.settingViewTopBar.tintColor = tintColor
-        maskView.settingViewTopBar.textColor = UIColor.black
+        maskView.settingView.backgroundColor = UIColor(white: 0.8, alpha: 0.9)
+        maskView.settingView.textColor = UIColor(white: 0.33, alpha: 1)
         
         // Create a customized view mode with gray scale image
         let grayScaleImage = image.convertToGrayScaleNoAlpha()
