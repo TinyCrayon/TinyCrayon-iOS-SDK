@@ -10,7 +10,7 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
-![Quick Select Tool](https://cloud.githubusercontent.com/assets/4088232/23604871/6f0c390c-0295-11e7-979d-f4824d839931.gif) | ![Hair Brush Tool](https://cloud.githubusercontent.com/assets/4088232/23604872/7248944e-0295-11e7-83dc-002b267789d1.gif)
+![Quick Select Tool](https://cloud.githubusercontent.com/assets/4088232/23604872/7248944e-0295-11e7-83dc-002b267789d1.gif) | ![Hair Brush Tool](https://cloud.githubusercontent.com/assets/4088232/23604871/6f0c390c-0295-11e7-979d-f4824d839931.gif)
 ------------ | -------------
 Quick Select Tool | Hair Brush Tool
 
