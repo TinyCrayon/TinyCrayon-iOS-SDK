@@ -125,4 +125,4 @@ To try these examples, and find out about more options please take a look at the
 The MIT license
 
 ## Terms of use
-By using TinyCrayon SDK, you agree to keep the banner ad embedded in TCMaskView fully viewable and clickable to the customers.
+By using TinyCrayon SDK, you agree to keep the banner ad embedded in TCMaskView fully viewable and clickable to the users.
