@@ -1,12 +1,12 @@
 # TinyCrayon SDK for iOS
 
 ## Overview
-TinyCrayon SDK provides tools for adding image layer mask capabilities to your mobile applications.
+TinyCrayon SDK provides tools for adding image cutout and layer mask capabilities to your mobile applications.
 
 Image layer mask is a fundamental technique in image manipulations. It allows you to selectively modify the opacity (transparency) of the layer they belong to. This flexibility to define the opacity of different areas of a layer is the basis for more interesting image manipulation techniques such as selective coloring and luminosity masking.
 
 The current version of TinyCrayon SDK provides the following three tools:
-* Quick Select: Smart and easy to use, you just need to select part of the object and the edge detection algorithm will find the boundary for you.
+* Quick Select: Smart and easy to use, users just need to select part of the object and the edge detection algorithm will find the boundary.
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
@@ -17,7 +17,7 @@ Quick Select Tool | Hair Brush Tool
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
 * iPad support: TinyCrayon SDK uses auto layout for its views and adapts to each screen size - iPhone or iPad.
-* Highly customizable: Style the UI and view modes as you wish.
+* Highly customizable: Style the UI, view modes and localized languages as you wish.
 * Swift: Keeping up with time, we chose Swift as the main development language of the TinyCrayon SDK, leading to leaner easier code.
 * Objective-C support: All of our public API is Objective-C compatible.
 
