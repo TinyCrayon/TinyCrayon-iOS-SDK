@@ -118,7 +118,7 @@ UIImage *outputImage = [mask cutoutWithImage:image resize:false];
 To try these examples, and find out about more options please take a look at the [Examples](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases).
 
 ## Further reading
-* Try our sample app [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), Focus Effect(https://itunes.apple.com/app/id1064333794).
+* Try our sample app [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
 * Check out TinyCrayon [guides](http://tinycrayon.com/guides-iOS/get-started.html) and [API reference](http://tinycrayon.com/docs-iOS/index.html) for more details.
 
 ## License
