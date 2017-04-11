@@ -14,6 +14,8 @@ The current version of TinyCrayon SDK provides the following three tools:
 ------------ | -------------
 Quick Select Tool | Hair Brush Tool
 
+Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
+
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
 * iPad support: TinyCrayon SDK uses auto layout for its views and adapts to each screen size - iPhone or iPad.
@@ -118,7 +120,7 @@ UIImage *outputImage = [mask cutoutWithImage:image resize:false];
 To try these examples, and find out about more options please take a look at the [Examples](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases).
 
 ## Further reading
-* Try our sample app [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
+* Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
 * Check out TinyCrayon [guides](http://tinycrayon.com/guides-iOS/get-started.html) and [API reference](http://tinycrayon.com/docs-iOS/index.html) for more details.
 
 ## License
