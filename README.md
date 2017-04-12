@@ -14,8 +14,6 @@ The current version of TinyCrayon SDK provides the following three tools:
 ------------ | -------------
 Quick Select Tool | Hair Brush Tool
 
-![untitled-1](https://cloud.githubusercontent.com/assets/4088232/24956166/ffc4285c-1fb8-11e7-9743-209de801e31a.jpg)
-
 Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
 
 ## Features
@@ -24,6 +22,8 @@ Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [
 * Highly customizable: Style the UI, view modes and localized languages as you wish.
 * Swift: Keeping up with time, we chose Swift as the main development language of the TinyCrayon SDK, leading to leaner easier code.
 * Objective-C support: All of our public API is Objective-C compatible.
+
+![create as many effects as you can think of](https://cloud.githubusercontent.com/assets/4088232/24956166/ffc4285c-1fb8-11e7-9743-209de801e31a.jpg)
 
 ## Installation
 
