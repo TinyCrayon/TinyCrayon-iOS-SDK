@@ -4,7 +4,7 @@
 [![Website](https://img.shields.io/website/http/tinycrayon.com/.svg)](http://www.tinycrayon.com/)
 [![platform](https://img.shields.io/cocoapods/p/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
-[![App Store](https://img.shields.io/badge/app%20store-sample%20apps-orange.svg)](https://itunes.apple.com/us/developer/yongyun-zeng/id1071044410)
+[![App Store](https://img.shields.io/badge/app%20store-sample%20apps-orange.svg)](https://itunes.apple.com/developer/yongyun-zeng/id1071044410)
 [![license](https://img.shields.io/cocoapods/l/TinyCrayon.svg)](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/blob/master/LICENSE)
 
 TinyCrayon SDK provides tools for adding image cutout and layer mask capabilities to your mobile applications.
