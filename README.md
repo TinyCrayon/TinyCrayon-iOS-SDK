@@ -1,4 +1,37 @@
 # TinyCrayon SDK for iOS
+> A smart and easy-to-use image masking and cutout SDK for mobile apps.
+
+[![Website](https://img.shields.io/website/http/tinycrayon.com/.svg)](http://www.tinycrayon.com/)
+[![platform](https://img.shields.io/cocoapods/p/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
+[![CocoaPods](https://img.shields.io/cocoapods/v/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
+[![App Store](https://img.shields.io/badge/app%20store-sample%20apps-orange.svg)](https://itunes.apple.com/us/developer/yongyun-zeng/id1071044410)
+[![license](https://img.shields.io/cocoapods/l/TinyCrayon.svg)](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/blob/master/LICENSE)
+
+TinyCrayon SDK provides tools for adding image cutout and layer mask capabilities to your mobile applications.
+
+![Quick Select Tool](https://cloud.githubusercontent.com/assets/4088232/23604872/7248944e-0295-11e7-83dc-002b267789d1.gif) | ![Hair Brush Tool](https://cloud.githubusercontent.com/assets/4088232/23604871/6f0c390c-0295-11e7-979d-f4824d839931.gif)
+------------ | -------------
+Quick Select Tool | Hair Brush Tool
+
+Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
+
+## Table of Contents
+
+* [Overview](#overview)
+* [Features](#features)
+* [Installation](#installation)
+   * [Prerequisites](#prerequisites)
+   * [Streamlined, using CocoaPods](#streamlined-using-cocoapods)
+   * [Manually, using the SDK download](#manually-using-the-sdk-download)
+      * [Download the SDK](#download-the-sdk)
+      * [Add the framework](#add-the-framework)
+   * [Settings for Objective-C](#settings-for-objective-c)
+* [Usage](#usage)
+   * [Add a TCMaskView](#add-a-tcmaskview)
+   * [TCMask class](#tcmask-class)
+* [Further reading](#further-reading)
+* [License](#license)
+* [Terms of use](#terms-of-use)
 
 ## Overview
 TinyCrayon SDK provides tools for adding image cutout and layer mask capabilities to your mobile applications.
@@ -9,12 +42,6 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Quick Select: Smart and easy to use, users just need to select part of the object and the edge detection algorithm will find the boundary.
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
-
-![Quick Select Tool](https://cloud.githubusercontent.com/assets/4088232/23604872/7248944e-0295-11e7-83dc-002b267789d1.gif) | ![Hair Brush Tool](https://cloud.githubusercontent.com/assets/4088232/23604871/6f0c390c-0295-11e7-979d-f4824d839931.gif)
------------- | -------------
-Quick Select Tool | Hair Brush Tool
-
-Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
 
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
