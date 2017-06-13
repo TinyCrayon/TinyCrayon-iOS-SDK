@@ -3,7 +3,7 @@
 
 [![Website](https://img.shields.io/website/http/tinycrayon.com/.svg)](http://www.tinycrayon.com/)
 [![platform](https://img.shields.io/cocoapods/p/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
-[![Compatible](https://img.shields.io/badge/compatible-Swift%2FObjective--C-yellow.svg)](https://cocoapods.org/pods/TinyCrayon)
+[![Compatible](https://img.shields.io/badge/compatible-Swift%20%2F%20Objective--C%20-yellow.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![Documentation](https://img.shields.io/badge/docs-latest-green.svg)](https://www.tinycrayon.com/docs-iOS/index.html)
 [![App Store](https://img.shields.io/badge/app%20store-sample%20apps-orange.svg)](https://itunes.apple.com/developer/yongyun-zeng/id1071044410)
