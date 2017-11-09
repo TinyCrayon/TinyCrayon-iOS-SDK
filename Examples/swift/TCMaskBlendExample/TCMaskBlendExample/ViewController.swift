@@ -27,6 +27,8 @@ import CoreImage
 import TCMask
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TCMaskViewDelegate {
+    
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var buttonGroup: UIView!
     
@@ -61,15 +63,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // adjust the size of image view to make it fit the image size and put it in the center of screen
         var x:CGFloat, y:CGFloat, width:CGFloat, height:CGFloat
         if (image.size.width > image.size.height) {
-            width = self.view.frame.width
+            width = containerView.frame.width
             height = width * image.size.height / image.size.width
             x = 0
-            y = (width - height) / 2
+            y = (containerView.frame.height - height) / 2
         }
         else {
-            height = self.view.frame.width
+            height = containerView.frame.height
             width = height * image.size.width / image.size.height
-            x = (height - width) / 2
+            x = (containerView.frame.width - width) / 2
             y = 0
         }
         imageView.frame = CGRect(x: x, y: y, width: width, height: height)

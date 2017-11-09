@@ -35,15 +35,15 @@
     imageView.image = _image;
     CGFloat x, y, width, height;
     if (_image.size.width > _image.size.height) {
-        width = self.view.frame.size.width;
+        width = containerView.frame.size.width;
         height = width * _image.size.height / _image.size.width;
         x = 0;
-        y = (width - height) / 2;
+        y = (containerView.frame.size.height - height) / 2;
     }
     else {
-        height = self.view.frame.size.width;
+        height = containerView.frame.size.height;
         width = height * _image.size.width / _image.size.height;
-        x = (height - width) / 2;
+        x = (containerView.frame.size.width - width) / 2;
         y = 0;
     }
     imageView.frame = CGRectMake(x, y, width, height);

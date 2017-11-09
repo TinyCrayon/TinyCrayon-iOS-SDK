@@ -25,6 +25,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ConfirmViewController : UIViewController {
+    __weak IBOutlet UIView *containerView;
     __weak IBOutlet UIImageView *imageView;
 }
 

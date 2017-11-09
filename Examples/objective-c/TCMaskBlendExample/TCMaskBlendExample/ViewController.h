@@ -27,6 +27,7 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, TCMaskViewDelegate> {
     
+    __weak IBOutlet UIView *containerView;
     __weak IBOutlet UIImageView *imageView;
     __weak IBOutlet UIView *buttonGroup;
     

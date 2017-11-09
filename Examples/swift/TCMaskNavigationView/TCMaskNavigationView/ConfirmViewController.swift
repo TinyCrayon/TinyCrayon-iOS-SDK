@@ -26,6 +26,7 @@ import UIKit
 
 class ConfirmViewController : UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     var image: UIImage!
     
@@ -35,15 +36,15 @@ class ConfirmViewController : UIViewController {
         // reset imageView's frame to put it in the center
         var x:CGFloat, y:CGFloat, width:CGFloat, height:CGFloat
         if (image.size.width > image.size.height) {
-            width = self.view.frame.width
+            width = containerView.frame.width
             height = width * image.size.height / image.size.width
             x = 0
-            y = (width - height) / 2
+            y = (containerView.frame.height - height) / 2
         }
         else {
-            height = self.view.frame.width
+            height = containerView.frame.height
             width = height * image.size.width / image.size.height
-            x = (height - width) / 2
+            x = (containerView.frame.width - width) / 2
             y = 0
         }
         imageView.frame = CGRect(x: x, y: y, width: width, height: height)

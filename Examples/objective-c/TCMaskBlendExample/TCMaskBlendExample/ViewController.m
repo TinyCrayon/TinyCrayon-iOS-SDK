@@ -62,15 +62,15 @@
     // adjust the size of image view to make it fit the image size and put it in the center of screen
     CGFloat x, y, width, height;
     if (image.size.width > image.size.height) {
-        width = self.view.frame.size.width;
+        width = containerView.frame.size.width;
         height = width * image.size.height / image.size.width;
         x = 0;
-        y = (width - height) / 2;
+        y = (containerView.frame.size.height - height) / 2;
     }
     else {
-        height = self.view.frame.size.width;
+        height = containerView.frame.size.height;
         width = height * image.size.width / image.size.height;
-        x = (height - width) / 2;
+        x = (containerView.frame.size.width - width) / 2;
         y = 0;
     }
     imageView.frame = CGRectMake(x, y, width, height);
