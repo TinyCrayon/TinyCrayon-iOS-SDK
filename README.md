@@ -1,7 +1,7 @@
 # TinyCrayon SDK for iOS
 > A smart and easy-to-use image masking and cutout SDK for mobile apps.
 
-[![Website](https://img.shields.io/website/http/tinycrayon.com/.svg)](http://www.tinycrayon.com/)
+[![Website](https://img.shields.io/website/https/www.tinycrayo.com.svg)](https://www.tinycrayon.com/)
 [![platform](https://img.shields.io/cocoapods/p/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![Compatible](https://img.shields.io/badge/compatible-Swift%20%2F%20Objective--C%20-yellow.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
