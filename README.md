@@ -45,6 +45,10 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
+## Notes
+* __No Ads__: From 5.0.1 and later versions, ads have been removed from the SDK.
+* __UI customization__: We are reorganizing the code now and will open source the swift code in the future, you will be able to customize your UI at that time.
+
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
 * iPad support: TinyCrayon SDK uses auto layout for its views and adapts to each screen size - iPhone or iPad.
@@ -57,7 +61,7 @@ The current version of TinyCrayon SDK provides the following three tools:
 ## Installation
 
 ### Prerequisites
-* Xcode 8.0 or later.
+* Xcode 9.0 or later.
 * A physical iOS device.
 * Recommended: [installation of CocoaPods](http://guides.cocoapods.org/using/getting-started) to simplify dependency management.
 
