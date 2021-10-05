@@ -67,7 +67,7 @@ header .nav>li>a:hover {
 }
 
 div.banner {
-    background-image: url('/img/banner_xs.png');
+    background-image: url('https://tinycrayon.github.io/TinyCrayon-iOS-SDK/img/banner_xs.png');
     width: 100%;
     height: 0;
     padding-bottom: 75%;
@@ -383,7 +383,7 @@ a.swift-tab, a.objc-tab {
     }
     
     div.banner {
-	background-image: url('/img/banner_sm.png');
+	background-image: url('https://tinycrayon.github.io/TinyCrayon-iOS-SDK/img/banner_sm.png');
 	padding-bottom: 56.25%;
 	font-size: 16px;
     }
@@ -424,7 +424,7 @@ a.swift-tab, a.objc-tab {
     }
     
     div.banner {
-	background-image: url('/img/banner_md.png');
+	background-image: url('https://tinycrayon.github.io/TinyCrayon-iOS-SDK/img/banner_md.png');
 	padding-bottom: 34.25%;
     }
 
@@ -444,6 +444,6 @@ a.swift-tab, a.objc-tab {
     }
     
     div.banner {
-	background-image: url('/img/banner_lg.png');
+	background-image: url('https://tinycrayon.github.io/TinyCrayon-iOS-SDK/img/banner_lg.png');
     }
 }
