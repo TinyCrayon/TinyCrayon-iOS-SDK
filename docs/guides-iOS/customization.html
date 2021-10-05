@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>iOS Guides | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-spy" data-offset="5">
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li class="active"><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li ><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<div class="row">
+  <br>
+  <div class="col-md-3" role="complementary">
+    <nav class="guides-sidebar hidden-print hidden-sm hidden-xs affix sidebar">
+      <ul class="nav" role="tablist" id="navbar-spy">
+	<li>
+	  <a href="/guides-iOS/get-started.html">Get Started</a>
+	  <ul class="nav hidden">
+            <li><a href="#prerequisites">Prerequisites</a></li>
+	    <li><a href="#overview">Overview</a></li>
+            <li><a href="#add-the-sdk">Add the SDK</a></li>
+	    <li><a href="#settings-for-objc">Settings for Objective-C</a></li>
+            <li><a href="#build-and-run-the-app">Build and run the app</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/work-with-layer-mask.html">Work with Layer Mask</a>
+	  <ul class="nav hidden">
+	    <li><a href="#about-layer-masks">About layer masks</a></li>
+	    <li><a href="#tcmaskview-delegate">TCMaskView Delegat</a></li>
+	    <li><a href="#process-image-using-layer-mask">Process Image using layer mask</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/customization.html">Customization</a>
+	  <ul class="nav">
+	    <li><a href="#customize-ui-style">Customize UI style</a></li>
+	    <li><a href="#customize-view-mode">Customize view mode</a></li>
+	    <li><a href="#localization">Localization</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/submit-to-app-store.html">Submit to App Store</a>
+	  <ul class="nav hidden">
+	    <li><a href="#notes-about-idfa">Notes about IDFA</a></li>
+	    <li><a href="#supply-idfa-details-for-review">Supply IDFA details for review</a></li>
+	    <li><a href="#whats-next">What's next?</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-9" role="main">
+    
+<div class="text-right">
+  <a href="/guides-iOS/work-with-layer-mask.html">Previous</a>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <a href="/guides-iOS/submit-to-app-store.html">Next</a>
+</div>
+<h1 class="page-header">Customization</h1>
+<p>This guide shows you how to customize UI style and view mode in TinyCrayon SDK</p>
+<p><a href="https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases" class="btn btn-default" role="button">Download Customization Example</a></p>
+<br>
+<h2 id="customize-ui-style" class="anchor">Customize UI style</h2>
+<hr>
+<p>To match your app theme, you may want to customize the UI style of TCMaskView</p>
+<p>To customize status bar style, set the following properties in TCMaskView:</p>
+<ul>
+  <li>statusBarStyle</li>
+  <li>prefersStatusBarHidden</li>
+</ul>
+<p>To customize color of views, background, fonts, etc... Set the following properties of TCUIView:</p>
+<ul>
+  <li>BackgroundColor: background color of the view.</li>
+  <li>TintColor: tint color of the view, inside which the color of all the buttons and icons will be set to tint color.</li>
+  <li>HighlightedColor: highlighted color of the view, inside which the highlighted color of all the buttons and icons will be set to highlighted color.</li>
+  <li>TextColor: text color of the view, inside which the text color of all the labels will be set to text color.</li>
+</ul>
+<p>The TCUIView is an abstraction of UI related styles of UIView, the following graph shows the TCUIView components of TCMaskView:</p>
+<br>
+<div>
+  <p><img src="/img/customize_ui_style_sm.png" class="img-responsive center-block" style="width:720px;" alt="Responsive image"></img></p>
+  <p class="text-center"><em>TCUIView components</em></p>
+</div>
+<br>
+<p>The following example changes TCMaskView theme to dark color:</p>
+<div class="code-main">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>let maskView = TCMaskView(image: self.image)
+    
+// Change status bar style
+maskView.statusBarStyle = UIStatusBarStyle.lightContent
+
+// Change UI components style
+maskView.topBar.backgroundColor = UIColor(white: 0.1, alpha: 1)
+maskView.topBar.tintColor = UIColor.white
+
+maskView.imageView.backgroundColor = UIColor(white: 0.2, alpha: 1)
+
+maskView.bottomBar.backgroundColor = UIColor(white: 0.1, alpha: 1)
+maskView.bottomBar.tintColor = UIColor.white
+maskView.bottomBar.textColor = UIColor.white
+
+maskView.settingView.backgroundColor = UIColor(white: 0.8, alpha: 0.9)
+maskView.settingView.textColor = UIColor(white: 0.33, alpha: 1)
+    
+maskView.presentFrom(rootViewController: self, animated: true)</code></pre>
+    </div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>TCMaskView *maskView = [[TCMaskView alloc] initWithImage:image];
+	  
+// Change status bar style
+maskView.statusBarStyle = UIStatusBarStyleLightContent;
+
+// Change UI components style
+maskView.topBar.backgroundColor = [[UIColor alloc] initWithWhite:0.1 alpha:1];
+maskView.topBar.tintColor = [UIColor whiteColor];
+
+maskView.imageView.backgroundColor = [[UIColor alloc] initWithWhite:0.2 alpha:1];
+
+maskView.bottomBar.backgroundColor = [[UIColor alloc] initWithWhite:0.1 alpha:1];
+maskView.bottomBar.tintColor = [UIColor whiteColor];
+maskView.bottomBar.textColor = [UIColor whiteColor];
+
+maskView.settingView.backgroundColor = [[UIColor alloc] initWithWhite:0.8 alpha:0.9];
+maskView.settingView.textColor = [[UIColor alloc] initWithWhite:0.33 alpha:1];
+
+[maskView presentFromRootViewController:self animated:true];</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+<div class="clearfix">
+  <div class="col-sm-offset-1 col-sm-4">
+    <p><img src="/img/dark_theme_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+    <p class="text-center"><em>Dark color theme</em></p>
+  </div>
+  <div class="col-sm-offset-2 col-sm-4">
+    <p><img src="/img/dark_theme_settings_sm.png" class=" img-responsive" alt="Responsive image"></img></p>
+    <p class="text-center"><em>Dark color theme of settings view</em></p>
+  </div>
+</div>
+<br>
+<h2 id="customize-view-mode" class="anchor">Customize view mode</h2>
+<hr>
+<p>TCMaskViewMode defines how the current masking result is shown to the user. The user can switch the view mode by tapping the <em>eye button</em> <img style="height:15px;width:15px;" src="/img/eyeblack@3x.png"/> at the top right of imageView in TCMaskView.</p>
+<p>By default, TCMaskView provides three view modes:</p>
+<ul>
+  <li>viewModes[0] = TCMaskViewMode(foregroundColor: UIColor(white: 1, alpha: 0.5), backgroundImage: nil, isInverted: true)</li>
+  <li>viewModes[1] = TCMaskViewMode.transparent()</li>
+  <li>viewModes[2] = TCMaskViewMode(foregroundColor: UIColor.black, backgroundImage: nil, isInverted: true)</li>
+</ul>
+<br>
+<div class="clearfix">
+  <div class="col-sm-4">
+    <p><img src="/img/viewmode1.png" class="img-responsive" alt="Responsive image"></img></p>
+    <p class="text-center"><em>viewModes[0]</em></p>
+  </div>
+  <div class="col-sm-4">
+    <p><img src="/img/viewmode2.png" class="img-responsive" alt="Responsive image"></img></p>
+    <p class="text-center"><em>viewModes[1]</em></p>
+  </div>
+  <div class="col-sm-4">
+    <p><img src="/img/viewmode3.png" class="img-responsive" alt="Responsive image"></img></p>
+    <p class="text-center"><em>viewModes[2]</em></p>
+  </div>
+</div>
+<p>You can create your customized TCMaskViewMode by setting its foreground/background image/color, check out the <a href="/docs-iOS/Classes/TCMaskViewMode">TCMaskViewMode docs</a> for details.</p>
+<p>The following example creates a gray scale view mode which makes TCMaskView look like a color effect app:</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>// Create a customized view mode with gray scale image            
+let viewMode = TCMaskViewMode(foregroundImage: grayScaleImage, backgroundImage: nil, isInverted: true)
+
+// set customized viewMode to be the only view mode in TCMaskView
+maskView.viewModes = [viewMode]</code></pre>
+    </div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>// Create a customized view mode with gray scale image
+TCMaskViewMode *viewMode = [[TCMaskViewMode alloc] initWithForegroundImage:grayScaleImage
+                             backgroundImage:nil isInverted:true];
+
+// set customized viewMode to be the only view mode in TCMaskView
+maskView.viewModes = @[viewMode];</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+<div class="clearfix">
+  <div class="col-sm-offset-4 col-sm-4">
+    <p><img class="img-responsive" src="/img/customized_view_mode.png"/></p>
+    <p class="text-center"><em>Customized view mode</em></p>
+  </div>
+</div>
+<br>
+<h2 id="localization" class="anchor">Localization</h2>
+<p>The TinyCrayon SDK is fully localizable. We provide an english fallback localization, that will be used when no matching localization is found. To determine the matching language TinyCrayon SDK uses NSLocale.preferredLanguages.</p>
+<p>To add support for a language, set the <code>TCMaskView.localizationDictionary</code> before you create any <code>TCMaskView</code>. The following example adds suport for two language: English and Simplified Chinese:</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>// Add language support for English and Simplified Chinese
+TCMaskView.localizationDictionary = [
+    "en": [:],
+    "zh-Hans": [
+        "Quick Select" : "快速选择",
+        "Hair Brush" : "头发画笔",
+        "Brush" : "画笔",
+        "Add" : "加",
+        "Subtract" : "减",
+        "Setting" : "设置",
+        "Invert" : "反向",
+        "Brush size" : "画笔大小",
+        "Hardness" : "硬度",
+        "Opacity" : "不透明度",
+        "Tips-Draw" : "单手指画出选择或移除的部分",
+        "Tips-Zoom" : "双手指的展缩控制放大或缩小",
+        "Tips-Move" : "双手指拖动来移动画布"
+    ]
+]</code></pre>
+    </div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>// Add language support for English and Simplified Chinese
+[TCMaskView setLocalizationDictionary: @{
+    @"en": @{ },
+    @"zh-Hans": @{
+        @"Quick Select" : @"快速选择",
+        @"Hair Brush" : @"头发画笔",
+        @"Brush" : @"画笔",
+        @"Add" : @"加",
+        @"Subtract" : @"减",
+        @"Setting" : @"设置",
+        @"Invert" : @"反向",
+        @"Brush size" : @"画笔大小",
+        @"Hardness" : @"硬度",
+        @"Opacity" : @"不透明度",
+        @"Tips-Draw" : @"单手指画出选择或移除的部分",
+        @"Tips-Zoom" : @"双手指的展缩控制放大或缩小",
+        @"Tips-Move" : @"双手指拖动来移动画布"
+    }
+}];</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+<h2 id="whats-next" class="anchor">What's next</h2>
+<hr>
+<p>Check out the <a href="/guides-iOS/submit-to-app-store">Submit to App Store guide</a> to see things to notice before submittig your apps to app store.</p>
+<br>
+<div class="clearfix">
+  <div class="pull-right">
+    <a href="/guides-iOS/work-with-layer-mask.html">Previous</a>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="/guides-iOS/submit-to-app-store.html">Next</a>
+  </div>
+</div>
+
+    <br>
+    <div class="content-footer nocontent">
+      
+      
+      <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under MIT License. For details, see our <a href="#">Site Policies</a>.
+      </p>
+      <p class="content-footer-date">Last updated Jan 28, 2017.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+    
+  </body>
+</html>

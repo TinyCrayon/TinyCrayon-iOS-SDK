@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>iOS Guides | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-spy" data-offset="5">
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li class="active"><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li ><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<div class="row">
+  <br>
+  <div class="col-md-3" role="complementary">
+    <nav class="guides-sidebar hidden-print hidden-sm hidden-xs affix sidebar">
+      <ul class="nav" role="tablist" id="navbar-spy">
+	<li>
+	  <a href="/guides-iOS/get-started.html">Get Started</a>
+	  <ul class="nav hidden">
+            <li><a href="#prerequisites">Prerequisites</a></li>
+	    <li><a href="#overview">Overview</a></li>
+            <li><a href="#add-the-sdk">Add the SDK</a></li>
+	    <li><a href="#settings-for-objc">Settings for Objective-C</a></li>
+            <li><a href="#build-and-run-the-app">Build and run the app</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/work-with-layer-mask.html">Work with Layer Mask</a>
+	  <ul class="nav">
+	    <li><a href="#about-layer-masks">About layer masks</a></li>
+	    <li><a href="#tcmaskview-delegate">TCMaskView Delegat</a></li>
+	    <li><a href="#process-image-using-layer-mask">Process Image using layer mask</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/customization.html">Customization</a>
+	  <ul class="nav hidden">
+	    <li><a href="#customize-ui-style">Customize UI style</a></li>
+	    <li><a href="#customize-view-mode">Customize view mode</a></li>
+	    <li><a href="#localization">Localization</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/submit-to-app-store.html">Submit to App Store</a>
+	  <ul class="nav hidden">
+	    <li><a href="#notes-about-idfa">Notes about IDFA</a></li>
+	    <li><a href="#supply-idfa-details-for-review">Supply IDFA details for review</a></li>
+	    <li><a href="#whats-next">What's next?</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-9" role="main">
+    
+<div class="text-right">
+  <a href="/guides-iOS/get-started.html">Previous</a>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <a href="/guides-iOS/customization.html">Next</a>
+</div>
+<h1 class="page-header">Work with Layer Mask</h1>
+<p>This guide shows you how to make use of image layer mask returned by TCMaskView</p>
+<p><a href="https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases" class="btn btn-default" role="button">Download TCMask Blend Example</a></p>
+<br>
+<h2 id="about-layer-masks" class="anchor">About layer masks</h2>
+<hr>
+<p>Layer masks are resolution-dependent bitmap images that are edited with the painting or selection tools. A layer mask controls the visibility of the layer to which it is added. You can edit a layer mask to add or subtract from the masked region without losing the layer pixels.</p>
+<p>A layer mask is a grayscale image, so areas you paint in black are hidden, areas you paint in white are visible, and areas you paint in shades of gray appear in various levels of transparency.</p>
+<p>To get more information about layer mask, check out the <a href="https://helpx.adobe.com/photoshop/using/masking-layers.html">mask layers tutorial</a> from Adobe Photoshop</p>
+<br>
+<h2 id="tcmaskview-delegate" class="anchor">TCMaskView delegate</h2>
+<hr>
+<p>When the user completes or exits from a TCMaskView, one or more functions in TCMaskViewDelegate will be called:</p>
+<ul>
+  <li>tcMaskViewDidExit: is called after TCMaskView exits</li>
+  <li>tcMaskViewDidComplete: is called after a popup TCMaskView completes</li>
+  <li>tcMaskViewWillPushViewController: is called before navigation controller is about to accomplish TCMaskView and process to the next UIViewController</li>
+</ul>
+<p>The layer mask is provided as the first parameter in those delegate functions:</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>class ViewController: UIViewController, TCMaskViewDelegate {
+    ...
+    // create and show a TCMaskView
+    func presentTCMaskView() {
+        let maskView = TCMaskView(image: image)
+        maskView.delegate = self
+        maskView.presentFrom(rootViewController: self, animated: true)
+    }
+    
+    // delecate function, which will when TCMaskView is completed
+    func tcMaskViewDidComplete(mask: TCMask, image: UIImage) {
+    
+    }
+    ...
+}</code></pre>
+    </div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>@implementation ViewController
+...
+// create and show a TCMaskView
+- (void)presentTCMaskView {
+    TCMaskView *maskView = [[TCMaskView alloc] initWithImage:image];
+    maskView.delegate = self;
+    [maskView presentFromRootViewController:self animated:true];
+}
+
+// delecate function, which will when TCMaskView is completed
+- (void)tcMaskViewDidCompleteWithMask:(TCMask *)mask image:(UIImage *)image {
+
+}
+...    
+@end</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+<h2 id="process-image-using-layer-mask" class="anchor">Process image using layer mask</h2>
+<hr>
+<p>Layer mask can be easily used to incorporate with other image editing frameworks.</p>
+<p>For the guides below, we'll use the following image and layer mask to show the examples.</p>
+<div class="clearfix">
+  <div class="col-xs-6">
+    <img src="/img/balloon_sm.jpg" class="img-responsive" alt="Responsive image"></img>
+    <p class="text-center"><em>Image</em></p>
+  </div>
+  <div class="col-xs-6">
+    <img src="/img/balloon_mask_sm.jpg" class="img-responsive" alt="Responsive image"></img>
+    <p class="text-center"><em>Layer Mask</em></p>
+  </div>
+</div>
+<h3>TCMask class</h3>
+<p>TCMask is an encapsulation of image masking result from TCMaskView, it has the following properties:</p>
+<ul>
+  <li>data: An array of 8-bits unsigned char, its length is equal to the number of pixels of the image in TCMaskView. Each element in data represents the mask value.</li>
+  <li>size: The size of mask, which is equal to the size of the image in TCMaskView.</li>
+</ul>
+<p>TCMask also provides some simple and easy to use functions to process layer mask with image, the following example cuts out the masked object from the image.</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+      <pre><code>let outputImage = mask.cutout(image: image, resize: false)</code></pre>
+    </div>
+    <div class="objc tab-pane fade" role="tabpanel">
+      <pre><code>UIImage *outputImage = [mask cutoutWithImage:image resize:false];</code></pre>
+    </div>
+  </div>
+</div>
+<p>Which will generate the following result:</p>
+<div class="center-image">
+  <img src="/img/balloon_cutout_sm.png" class="img-responsive center-block" alt="Responsive image"></img>
+  <p class="text-center"><em>Cutout image</em></p>
+</div>
+<h3>Integrate with other frameworks</h3>
+TinyCrayon can be easily integrated with other image editing frameworks. Usually, if the framework requres an mask image as a parameter, you can just use imageOfGray or imageOfRGBA to create it.
+<h4>Integrate with Core Image</h4>
+<p><a href="https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html">Core Image</a> is an image processing and analysis technology designed to provide near real-time processing for still and video images.</p>
+<p>The following code creates an image with the selected mask region to be colored and the background to be gray scale:</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>// Create a mask image from mask array
+let maskImage = CIImage(image: mask.rgbaImage())
+let ciImage = CIImage(image: image)
+
+// Use color filter to create a gray scale image
+let colorFilter = CIFilter(name: "CIColorControls")!
+colorFilter.setValue(ciImage , forKey: kCIInputImageKey)
+colorFilter.setValue(0, forKey: kCIInputSaturationKey)
+
+// Use blend filter to blend color image and gray scale image using mask
+let blendFilter = CIFilter(name: "CIBlendWithAlphaMask")!
+blendFilter.setValue(ciImage, forKey: kCIInputImageKey)
+blendFilter.setValue(colorFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
+blendFilter.setValue(maskImage, forKey: kCIInputMaskImageKey)
+        
+// Get the output result
+let result = blendFilter.outputImage!
+let outputImage = UIImage(ciImage: result)</code></pre>
+</div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>// Create a mask image from mask array
+CIImage *maskImage = [[CIImage alloc] initWithImage:[mask rgbaImage]];
+CIImage *ciImage = [[CIImage alloc] initWithImage:image];
+
+// Use color filter to create a gray scale image
+CIFilter *colorFilter = [CIFilter filterWithName:@"CIColorControls"];
+[colorFilter setValue:ciImage forKey:kCIInputImageKey];
+[colorFilter setValue:0 forKey:kCIInputSaturationKey];
+
+// Use blend filter to blend color image and gray scale image using mask
+CIFilter *blendFilter = [CIFilter filterWithName:@"CIBlendWithAlphaMask"];
+[blendFilter setValue:ciImage forKey:kCIInputImageKey];
+[blendFilter setValue:colorFilter.outputImage forKey:kCIInputBackgroundImageKey];
+[blendFilter setValue:maskImage forKey:kCIInputMaskImageKey];
+
+// Get the output result
+CIImage *result = blendFilter.outputImage;
+UIImage *outputImage = [[UIImage alloc] initWithCIImage:result];</pre></code>
+    </div>
+  </div>
+</div>
+<div class="center-image">
+  <img src="/img/balloon_gray_sm.jpg" class="img-responsive center-block" alt="Responsive image"></img>
+  <p class="text-center"><em>Output image</em></p>
+</div>
+<h4>Integrate with GPUImage</h4>
+<p>The <a href="https://github.com/BradLarson/GPUImage">GPUImage framework</a> is a BSD-licensed iOS library that lets you apply GPU-accelerated filters and other effects to images, live camera video, and movies.</p>
+<p>The following code creates an image with the selected mask region to be colored and the background to be sketch effect:</p>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href=".swift" class="swift-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Swift</a>
+    </li>
+    <li role="presentation" class="">
+      <a href=".objc" role="tab" class="objc-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Objective-C</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="swift tab-pane fade active in" role="tabpanel">
+<pre><code>// Create pictures
+let picture = GPUImagePicture(image: image)!
+let maskPic = GPUImagePicture(image: mask.grayScaleImage())!
+        
+// Create filters
+let sketchFilter = GPUImageSketchFilter()
+let maskFilter = GPUImageMaskFilter()
+let blendFilter = GPUImageSourceOverBlendFilter()
+        
+// Chain filters
+picture.addTarget(sketchFilter)
+picture.addTarget(maskFilter)
+maskPic.addTarget(maskFilter)
+sketchFilter.addTarget(blendFilter)
+maskFilter.addTarget(blendFilter)
+
+// Get the output result
+blendFilter.useNextFrameForImageCapture()
+picture.processImage()
+maskPic.processImage()
+let outputImage = blendFilter.imageFromCurrentFramebuffer()</code></pre>
+</div>
+    <div class="objc tab-pane fade" role="tabpanel">
+<pre><code>// Create pictures
+GPUImagePicture *picture = [[GPUImagePicture alloc] initWithImage:image];
+GPUImagePicture *maskPic = [[GPUImagePicture alloc] initWithImage:[mask grayScaleImage]];
+
+// Create filters
+GPUImageFilter *sketchFilter = [[GPUImageSketchFilter alloc] init];
+GPUImageFilter *maskFilter = [[GPUImageMaskFilter alloc] init];
+GPUImageFilter *blendFilter = [[GPUImageSourceOverBlendFilter alloc] init];
+
+// Chain filters
+[picture addTarget:sketchFilter];
+[picture addTarget:maskFilter];
+[maskPic addTarget:maskFilter];
+[sketchFilter addTarget:blendFilter];
+[maskFilter addTarget:blendFilter];
+
+// Get the output result
+[blendFilter useNextFrameForImageCapture];
+[picture processImage];
+[maskPic processImage];
+UIImage *outputImage = [blendFilter imageFromCurrentFramebuffer];</code></pre>
+    </div>
+  </div>
+</div>
+<div class="center-image">
+  <img src="/img/balloon_sketch_sm.jpg" class="img-responsive center-block" alt="Responsive image"></img>
+  <p class="text-center"><em>Output image</em></p>
+</div>
+<br>
+<h2 id="whats-next">What's next</h2>
+<p>Check out <a href="/docs-iOS/Classes/TCMask.html">TinyCrayon docs</a> for more API reference details.</p>
+<p>To see how to customize view mode or UI styles, check out the guide <a href="/guides-iOS/customization.html">Customization</a>.</p>
+<br>
+<div class="clearfix">
+  <div class="pull-right">
+    <a href="/guides-iOS/get-started.html">Previous</a>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="/guides-iOS/customization.html">Next</a>
+  </div>
+</div>
+
+    <br>
+    <div class="content-footer nocontent">
+      
+      
+      <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under MIT License. For details, see our <a href="#">Site Policies</a>.
+      </p>
+      <p class="content-footer-date">Last updated Jan 28, 2017.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+    
+  </body>
+</html>

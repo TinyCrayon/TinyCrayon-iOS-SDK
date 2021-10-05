@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>iOS Guides | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-spy" data-offset="5">
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li class="active"><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li ><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<div class="row">
+  <br>
+  <div class="col-md-3" role="complementary">
+    <nav class="guides-sidebar hidden-print hidden-sm hidden-xs affix sidebar">
+      <ul class="nav" role="tablist" id="navbar-spy">
+	<li>
+	  <a href="/guides-iOS/get-started.html">Get Started</a>
+	  <ul class="nav">
+            <li><a href="#prerequisites">Prerequisites</a></li>
+	    <li><a href="#overview">Overview</a></li>
+            <li><a href="#add-the-sdk">Add the SDK</a></li>
+	    <li><a href="#settings-for-objc">Settings for Objective-C</a></li>
+            <li><a href="#build-and-run-the-app">Build and run the app</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/work-with-layer-mask.html">Work with Layer Mask</a>
+	  <ul class="nav hidden">
+	    <li><a href="#about-layer-masks">About layer masks</a></li>
+	    <li><a href="#tcmaskview-delegate">TCMaskView Delegat</a></li>
+	    <li><a href="#process-image-using-layer-mask">Process Image using layer mask</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/customization.html">Customization</a>
+	  <ul class="nav hidden">
+	    <li><a href="#customize-ui-style">Customize UI style</a></li>
+	    <li><a href="#customize-view-mode">Customize view mode</a></li>
+	    <li><a href="#localization">Localization</a></li>
+	    <li><a href="#whats-next">What's next</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="/guides-iOS/submit-to-app-store.html">Submit to App Store</a>
+	  <ul class="nav hidden">
+	    <li><a href="#notes-about-idfa">Notes about IDFA</a></li>
+	    <li><a href="#supply-idfa-details-for-review">Supply IDFA details for review</a></li>
+	    <li><a href="#whats-next">What's next?</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-9" role="main">
+    
+<div class="relative">
+  <h1 class="page-header">Get Started</h1>
+  <div class="platforms">
+    <div class="platform active">
+      <a href="/guides-iOS/get-started.html">
+	<img src="/img/iOS_active.png">
+	<span>iOS</span>
+      </a>
+    </div>
+    <div class="platform">
+      <a href="/android-coming-soon.html">
+	<img src="/img/android_gray.png">
+	<span>Android</span>
+      </a>
+    </div>
+  </div>
+</div>
+<p>This guide shows you how to include the TinyCrayon SDKs in the TCMaskPopView example project.</p>
+<p><a href="https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases" class="btn btn-default" role="button">Download TCMaskPopView example</a></p>
+<br>
+<h2 id="prerequisites" class="anchor">Prerequisites</h2>
+<hr>
+<ul>
+  <li>Xcode 8.0 or later.</li>
+  <li>A physical iOS device.</li>
+  <li>Recommended: <a href="//guides.cocoapods.org/using/getting-started">Install CocoaPods</a> to simplify dependency management</li>
+</ul>
+<br>
+<h2 id="overview" class="anchor">Overview</h2>
+<hr>
+<p>TinyCrayon SDK provides tools for adding image cutout and layer mask capabilities to your mobile applications.</p>
+<p>Image layer mask is a fundamental technique in image manipulations. It allows you to selectively modify the opacity (transparency) of the layer they belong to. This flexibility to define the opacity of different areas of a layer is the basis for more interesting image manipulation techniques such as selective coloring and luminosity masking.</p>
+<p>The current version of TinyCrayon SDK provides the following three tools:</p>
+<ul>
+  <li><strong>Quick Select</strong>: Smart and easy to use, you just need to select part of the object and the edge detection algorithm will find the boundary for you.</li>
+  <li><strong>Hair Brush</strong>: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.</li>
+  <li><strong>Regular Brush</strong>: A regular brush tool with the capability to adjust its size, hardness and opacity.</li>
+</ul>
+<p>To get an overview of the tools, try our sample app <a href="https://itunes.apple.com/app/id1072712460">Image Eraser</a></p>
+<br>
+<h2 id="add-the-sdk" class="anchor">Add the SDK</h2>
+<hr>
+<h3>Streamlined, using CocoaPods</h3>
+<p>TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, <a href="https://guides.cocoapods.org/using/getting-started.html">this Getting Started Guide will help you</a>. CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.</p>
+<p><strong>Important:</strong> Please make sure that you have a CocoaPods version &gt;= 0.39.0 installed. You can check your version of CocoaPods with <code>pod --version</code>.</p>
+<p>Here's what you have to add to your <code>Podfile</code> (if you do not have <code>Podfile</code>, create one in your project root directory):</p>
+<pre class="highlight ruby"><code><span class="n">target 'MyApp' do</span>
+<span class="n">  pod</span> <span class="s1">'TinyCrayon'</span> 
+<span class="n">end</span></code></pre>
+<p>Run <code>pod install</code> from the terminal, in the same directory as the Podfile. Once the installation finishes, open MyApp.xcworkspace and build, your project files should include a Pods project with new dependencies for <code>TCCore</code> and <code>TCMask</code>.</p>
+<h3>Manually, using the SDK download</h3>
+<p>If you don't want to use Cocoapods you can still take advantage of the TinyCrayon SDKs by importing the frameworks directly.</p>
+<h4>Download the SDK</h4>
+<ol>
+  <li>Download the <a href="https://www.tinycrayon.com/sdk/iOS/TinyCrayon.zip">TinyCrayon SDK zip</a> (this is a ~20MB file and may take some time).</li>
+  <li>Unzip the TinyCrayon.zip</li>
+</ol>
+<h4>Add the framework</h4>
+<p>Right-click on the TCMaskPopView project, and choose <code>Add Files to "TCMaskPopView"</code>.</p>
+<p><img src="/img/sc_add_files_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<p>Click <code>Options</code> at the bottom of the screen and check the <code>Copy items if needed</code> checkbox. Then click <code>Add</code> to add the TCCore.framework and TCMask.framework.</p>
+<p><img src="/img/sc_add_frameworks_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<p>Click on the TCMaskPopView project, in Targets->TCMaskPopView, in <code>General</code> tab, under <code>Embedded Binaries</code>, click <code>+</code></p>
+<p><img src="/img/sc_add_embedded_binaries_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<p>Click <code>Add</code> to add the <code>TCMask.framework</code> to embedded binaries</p>
+<p><img src="/img/sc_add_tcmask_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<p>Finally, the framework dependency looks like the following:</p>
+<p><img src="/img/framework_final_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<br>
+<h2 id="settings-for-objc" class="anchor">Settings for Objective-C</h2>
+<p>TinyCrayon is written in Swift, if your project is using Objective-C, you need to set <code>Always Embed Swift Standard Libraries</code> to be YES in your Build Settings.</p>
+<p>This build setting, which specifies whether a target's product has embedded content with Swift code, tells Xcode to embed Swift standard libraries in your app when set to YES. <a href="https://developer.apple.com/library/content/qa/qa1881/_index.html">See more</a>.</p>
+<p><img src="/img/embed_swift_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<hr>
+<br>
+<h2 id="build-and-run-the-app" class="anchor">Build and run the app</h4>
+<p>Build and run the app. This time, a TCMaskView is popped up.</p>
+<p><img src="/img/build_and_run_sm.png" class="img-responsive" alt="Responsive image"></img></p>
+<h2 id="whats-next" class="anchor">What's next</h2>
+<hr>
+<p>To see how to integrate TCMaskView in UINavigationViewController, check out the <a href="https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases">TCMaskNavigationView example</a></p>
+<p>To see how to incorporate your image editing app with image mask, check out the guide <a href="/guides-iOS/work-with-layer-mask.html">Work with Layer Mask</a></p>
+<p>To see how to customize view mode or UI styles, check out the guide <a href="/guides-iOS/customization.html">Customization</a>.</p>
+<br>
+<div class="clearfix">
+  <div class="pull-right">
+    <a href="/guides-iOS/work-with-layer-mask.html">Next</a>
+  </div>
+</div>
+
+    <br>
+    <div class="content-footer nocontent">
+      
+<p>Portions of this page are reproduced from <a href="https://developers.google.com/readme/policies/">work created and shared by Google</a> in <a href="https://firebase.google.com/docs/ios/setup">Firebase get started page</a></p>
+
+      <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under MIT License. For details, see our <a href="#">Site Policies</a>.
+      </p>
+      <p class="content-footer-date">Last updated Jan 28, 2017.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Android version | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body >
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li ><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li ><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<h3>Android version is coming soon</h3>
+<hr>
+<p>Subscribe and you'll be notified when the android version SDK is released</p>
+<form id="android-subscription">
+  <div class="clearfix">
+    <div class="form-group col-sm-6">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" required="required" placeholder="Email">
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="col-sm-6">
+      <div class="hidden alert alert-success" role="alert">Thanks! You'll receive an email notification when the TinyCrayon android SDK is released.</div>
+      <div class="hidden alert alert-warning"  role="alert">Network error, please try again.</div>
+    </div>
+  </div>
+  <button id="submit" type="submit" class="btn btn-primary" style="width:71px; height:34px;">
+    <div id="activity-indicator" class="hidden">
+      <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
+      <span class="sr-only">Submitting...</span>
+    </div>
+    <div id="button-text">
+      Submit
+    </div>
+  </button>
+</form>
+<br>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+<script>
+AWS.config.update({
+region: "us-east-1"
+});
+
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+IdentityPoolId: "us-east-1:36dde0a0-d281-45dc-b5e0-94a6e3e7a751",
+RoleArn: "arn:aws:iam::358518170177:role/Cognito_AndroidSubscriptionUnauth_Role"
+});
+
+var dynamodb = new AWS.DynamoDB();
+var docClient = new AWS.DynamoDB.DocumentClient();
+
+$( "#android-subscription" ).submit(function( event ) {
+event.preventDefault();
+var email = $("#email").val().trim();
+var params = {
+  TableName :"AndroidSubscription",
+  Item:{
+    "email": email
+  }
+};
+
+$("#android-subscription .alert").addClass('hidden');
+$("#android-subscription .alert-info").removeClass('hidden');
+$("#submit").prop("disabled",true);
+$("#button-text").addClass("hidden");
+$("#activity-indicator").removeClass("hidden");
+
+
+docClient.put(params, function(err, data) {
+  $("#android-subscription .alert-info").addClass('hidden');
+  $("#submit").prop("disabled",false);
+  $("#button-text").removeClass("hidden");
+  $("#activity-indicator").addClass("hidden");
+  if (err) {
+    $("#android-subscription .alert-warning").removeClass('hidden');
+  } else {
+    $("#android-subscription .alert-success").removeClass('hidden');
+  }
+});
+});
+
+</script>
+
+  </body>
+</html>

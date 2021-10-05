@@ -1,0 +1,509 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>iOS Docs | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+<link rel="stylesheet" type="text/css" href="/css/jazzy.css">
+
+  </head>
+
+  <body >
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li ><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li class="active"><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<p class="breadcrumbs">
+  <a class="breadcrumb" href="/docs-iOS/index.html">TinyCrayon Reference</a>
+  <img class="carat" src="/img/carat.png" />
+  TCMaskViewMode Class Reference
+</p>
+
+<div class="content-wrapper">
+  <nav class="navigation">
+    <ul class="nav-groups">
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Classes.html">Classes</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMask.html">TCMask</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMaskView.html">TCMaskView</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMaskViewMode.html">TCMaskViewMode</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCUIView.html">TCUIView</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Enums.html">Enums</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Enums/TCMaskTool.html">TCMaskTool</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Protocols.html">Protocols</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Protocols/TCMaskViewDelegate.html">TCMaskViewDelegate</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <article class="main-content">
+    
+<section class="section">
+  <div class="section-content">
+    <h1>TCMaskViewMode</h1>
+    <div class="declaration">
+      <div class="language">
+	<p class="aside-title">Swift</p>
+	<pre class="highlight"><code><span class="kd">class</span> <span class="kt">TCMaskViewMode</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+      </div>
+      <div class="language">
+	<p class="aside-title">Objective-C</p>
+	<pre class="highlight"><code><span class="kd">@interface</span> <span class="kt">TCMaskViewMode</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+      </div>
+    </div>
+    <p>TCMaskViewMode defines how the current masking result is shown to the user, the result value (v) shown to user is blended with current mask (m) by foreground image/color (f) and background image/color (b):</p>
+    <ul>
+      <li>If inverted is false: v = f * m + b * (1 - m)</li>
+      <li>If inverted is true: v = f * (1 - m) + b * m</li>
+    </ul>
+    <p>For both foreground and background settings:</p>
+    <ul>
+      <li>If image is not nil, image will be used</li>
+      <li>If image is nil and color is not nil, color will be used</li>
+      <li>If both image and color are nil, foreground will be set to a PNG transparent color and background will be set to the image of masking</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-content">
+    <div class="task-group">
+      <ul class="item-container">
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask14TCMaskViewModecFT_S0_"></a>
+              <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask14TCMaskViewModecFT_S0_">init()</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">()</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)init;</span></code><pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask14TCMaskViewModecFT15foregroundColorCSo7UIColor15backgroundColorS1_10isInvertedSb_S0_"></a>
+              <a name="//apple_ref/swift/Method/init(foregroundColor:backgroundColor:isInverted:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask14TCMaskViewModecFT15foregroundColorCSo7UIColor15backgroundColorS1_10isInvertedSb_S0_">init(foregroundColor:backgroundColor:isInverted:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">foregroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">isInverted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)initWithForegroundColor:(UIColor * _Nonnull)foregroundColor backgroundColor:(UIColor * _Nonnull)backgroundColor isInverted:(BOOL)isInverted;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask14TCMaskViewModecFT15foregroundImageGSQCSo7UIImage_15backgroundColorCSo7UIColor10isInvertedSb_S0_"></a>
+              <a name="//apple_ref/swift/Method/init(foregroundImage:backgroundColor:isInverted:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask14TCMaskViewModecFT15foregroundImageGSQCSo7UIImage_15backgroundColorCSo7UIColor10isInvertedSb_S0_">init(foregroundImage:backgroundColor:isInverted:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">foregroundImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">isInverted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)initWithForegroundImage:(UIImage * _Null_unspecified)foregroundImage backgroundColor:(UIColor * _Nonnull)backgroundColor isInverted:(BOOL)isInverted;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask14TCMaskViewModecFT15foregroundColorCSo7UIColor15backgroundImageGSQCSo7UIImage_10isInvertedSb_S0_"></a>
+              <a name="//apple_ref/swift/Method/init(foregroundColor:backgroundImage:isInverted:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask14TCMaskViewModecFT15foregroundColorCSo7UIColor15backgroundImageGSQCSo7UIImage_10isInvertedSb_S0_">init(foregroundColor:backgroundImage:isInverted:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">foregroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">backgroundImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span><span class="p">,</span> <span class="nv">isInverted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)initWithForegroundColor:(UIColor * _Nonnull)foregroundColor backgroundImage:(UIImage * _Null_unspecified)backgroundImage isInverted:(BOOL)isInverted;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask14TCMaskViewModecFT15foregroundImageGSQCSo7UIImage_15backgroundImageGSQS1__10isInvertedSb_S0_"></a>
+              <a name="//apple_ref/swift/Method/init(foregroundImage:backgroundImage:isInverted:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask14TCMaskViewModecFT15foregroundImageGSQCSo7UIImage_15backgroundImageGSQS1__10isInvertedSb_S0_">init(foregroundImage:backgroundImage:isInverted:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">foregroundImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span><span class="p">,</span> <span class="nv">backgroundImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span><span class="p">,</span> <span class="nv">isInverted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)initWithForegroundImage:(UIImage * _Null_unspecified)foregroundImage backgroundImage:(UIImage * _Null_unspecified)backgroundImage isInverted:(BOOL)isInverted</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask14TCMaskViewMode15backgroundColorGSQCSo7UIColor_"></a>
+              <a name="//apple_ref/swift/Property/backgroundColor" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask14TCMaskViewMode15backgroundColorGSQCSo7UIColor_">backgroundColor</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Background color of TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">backgroundColor</span> <span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) UIColor * _Null_unspecified backgroundColor;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask14TCMaskViewMode15foregroundColorGSQCSo7UIColor_"></a>
+              <a name="//apple_ref/swift/Property/foregroundColor" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask14TCMaskViewMode15foregroundColorGSQCSo7UIColor_">foregroundColor</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Foreground color of TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">foregroundColor</span> <span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) UIColor * _Null_unspecified foregroundColor;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask14TCMaskViewMode15backgroundImageGSQCSo7UIImage_"></a>
+              <a name="//apple_ref/swift/Property/backgroundImage" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask14TCMaskViewMode15backgroundImageGSQCSo7UIImage_">backgroundImage</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Background image of TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">backgroundImage</span> <span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) UIImage * _Null_unspecified backgroundImage;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask14TCMaskViewMode15foregroundImageGSQCSo7UIImage_"></a>
+              <a name="//apple_ref/swift/Property/foregroundImage" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask14TCMaskViewMode15foregroundImageGSQCSo7UIImage_">foregroundImage</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Foreground image of TCMaskViewMode</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">foregroundImage</span> <span class="p">:</span> <span class="kt">UIImage</span><span class="o">!</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) UIImage * _Null_unspecified foregroundImage;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask14TCMaskViewMode10isInvertedSb"></a>
+              <a name="//apple_ref/swift/Property/isInverted" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask14TCMaskViewMode10isInvertedSb">isInverted</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>A Boolean value that determines whether the blending between foreground and background color/image should be inverted.
+		  The default value is false.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">isInverted</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic) BOOL isInverted;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:ZFC6TCMask14TCMaskViewMode11transparentFT_S0_"></a>
+              <a name="//apple_ref/swift/Method/transparent()" class="dashAnchor"></a>
+              <a class="token" href="#/s:ZFC6TCMask14TCMaskViewMode11transparentFT_S0_">transparent()</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Create a TCMaskViewMode which looks like a PNG transparent pattern.</p>
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">transparent</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">TCMaskViewMode</span></code></pre>
+                </div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">+ (TCMaskViewMode * _Nonnull)transparent;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Return Value</h4>
+                <p>A new TCMaskViewMode which looks like a PNG transparent pattern.</p>
+              </div>
+            </section>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </article>
+</div>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+<script src="/js/jazzy.js"></script>
+
+  </body>
+</html>

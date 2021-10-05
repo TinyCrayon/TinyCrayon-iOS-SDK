@@ -1,0 +1,889 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>iOS Docs | TinyCrayon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css">
+    
+<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+<link rel="stylesheet" type="text/css" href="/css/jazzy.css">
+
+  </head>
+
+  <body >
+    <div class="logo text-center"><a href="/">TinyCrayon</a></div>
+    <header class="text-center">
+      <nav class="navbar navbar-fixed-top">
+        <ul class="nav">
+          <li ><a id="link-index" href="/">Home</a></li>
+          <li ><a id="link-guides" href="/guides-iOS/get-started.html">Guides</a></li>
+          <li class="active"><a id="link-docs" href="/docs-iOS/index.html">Docs</a></li>
+	  <li ><a id="link-faq" href="/FAQ-iOS.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<div class="main-content">
+  <div class="container">
+    
+<p class="breadcrumbs">
+  <a class="breadcrumb" href="/docs-iOS/index.html">TinyCrayon Reference</a>
+  <img class="carat" src="/img/carat.png" />
+  TCMaskView Class Reference
+</p>
+
+<div class="content-wrapper">
+  <nav class="navigation">
+    <ul class="nav-groups">
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Classes.html">Classes</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMask.html">TCMask</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMaskView.html">TCMaskView</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCMaskViewMode.html">TCMaskViewMode</a>
+          </li>
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Classes/TCUIView.html">TCUIView</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Enums.html">Enums</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Enums/TCMaskTool.html">TCMaskTool</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group-name">
+        <a class="nav-group-name-link" href="/docs-iOS/Protocols.html">Protocols</a>
+        <ul class="nav-group-tasks">
+          <li class="nav-group-task">
+            <a class="nav-group-task-link" href="/docs-iOS/Protocols/TCMaskViewDelegate.html">TCMaskViewDelegate</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <article class="main-content">
+    
+<section class="section">
+  <div class="section-content">
+    <h1>TCMaskView</h1>
+    <div class="declaration">
+      <div class="language">
+	<p class="aside-title">Swift</p>
+	<pre class="highlight"><code><span class="kd">class</span> <span class="kt">TCMaskView</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+      </div>
+      <div class="language">
+	<p class="aside-title">Objective-C</p>
+	<pre class="highlight"><code><span class="kd">@interface</span> <span class="kt">TCMaskView</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+      </div>
+    </div>
+    <p>The module that displays a UIViewController for image masking.
+      A minimum implementation to present a TCMaskview within a UIViewController class is:</p>
+
+    <pre class="highlight plaintext"><code>// Create TCMaskView, specifying the image for masking.
+let maskView = TCMaskView(image: self.image)
+
+// Present TCMaskView from current view controller.
+maskView.present(from: self, animated: true)</code></pre>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-content">
+    <div class="task-group">
+      <ul class="item-container">
+	<li class="item">
+          <div>
+            <code>
+              <a name="/s:ZvC6TCMask10TCMaskView22localizationDictionaryGVs10DictionarySSGS1_SSSS__"></a>
+              <a name="//apple_ref/swift/Variable/localizationDictionary" class="dashAnchor"></a>
+              <a class="token" href="#/s:ZvC6TCMask10TCMaskView22localizationDictionaryGVs10DictionarySSGS1_SSSS__">localizationDictionary</a>
+            </code>
+          </div>
+          <div class="height-container" style="display: none;">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Localization dictionary, set it before you create any <code>TCMaskView</code>.</p>
+		<p>An english fallback localization will be used when no matching localization is found.</p>
+		<p>To determine the matching language TinyCrayon SDK uses <code>NSLocale.preferredLanguages</code>.</p>
+		<p>To add suport for a language, set a localization dictionary like so:</p>
+<pre class="highlight plaintext"><code>TCMaskView.localizationDictionary =  [
+   "Quick Select" : "Quick Select",
+   "Hair Brush" : "Hair Brush",
+   "Brush" : "Brush",
+   "Add" : "Add",
+   "Subtract" : "Subtract",
+   "Setting" : "Setting",
+   "Invert" : "Invert",
+   "Brush size" : "Brush size",
+   "Hardness" : "Hardness",
+   "Opacity" : "Opacity",
+   "Tips-Draw" : "Draw on the places to select/erase",
+   "Tips-Zoom" : "Pinch to zoom in/out to refine details",
+   "Tips-Move" : "Use two fingers dragging to move"
+]</code></pre>
+	      </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+		  <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">localizationDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]]()</span></code></pre>
+		</div>
+		<div class="language">
+                  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code>+ (NSDictionary<NSString *, NSDictionary<NSString *, NSString *> *> * _Nonnull)localizationDictionary;
++ (void)setLocalizationDictionary:(NSDictionary<NSString *, NSDictionary<NSString *, NSString *> *> * _Nonnull)value;</code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskViewcFT5imageCSo7UIImage_S0_"></a>
+              <a name="//apple_ref/swift/Method/init(image:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskViewcFT5imageCSo7UIImage_S0_">init(image:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initialize a TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (nonnull instancetype)initWithImage:(UIImage * _Nonnull)image;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView8delegateXwGSqPS_18TCMaskViewDelegate__"></a>
+              <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView8delegateXwGSqPS_18TCMaskViewDelegate__">delegate</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Optional delegate object that receives exit/completion notifications from this TCMaskView.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/TCMaskViewDelegate.html">TCMaskViewDelegate</a></span><span class="p">?</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, weak) id <TCMaskViewDelegate> _Nullable delegate;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView9viewModesGSaCS_14TCMaskViewMode_"></a>
+              <a name="//apple_ref/swift/Property/viewModes" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView9viewModesGSaCS_14TCMaskViewMode_">viewModes</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>View modes of TCMaskView, if no viewModes is provided or by default, TCMaskView will use the following view modes:</p>
+
+		<pre class="highlight plaintext"><code>viewModes[0] = TCMaskViewMode(foregroundColor: UIColor(white: 1, alpha: 0.5), backgroundImage: nil, isInverted: true);
+viewModes[1] = TCMaskViewMode.transparent
+viewModes[2] = TCMaskViewMode(foregroundColor: UIColor.black, backgroundImage: nil, isInverted: true)</code></pre>
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">viewModes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/TCMaskViewMode.html">TCMaskViewMode</a></span><span class="p">]</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, copy) NSArray<TCMaskViewMode *> * _Nonnull viewModes;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView11initialToolOS_10TCMaskTool"></a>
+              <a name="//apple_ref/swift/Property/initialTool" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView11initialToolOS_10TCMaskTool">initialTool</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Initial tool when TCMaskView is presented</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">initialTool</span><span class="p">:</span> <span class="kt"><a href="../Enums/TCMaskTool.html">TCMaskTool</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic) enum TCMaskTool initialTool;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView22prefersStatusBarHiddenSb"></a>
+              <a name="//apple_ref/swift/Property/prefersStatusBarHidden" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView22prefersStatusBarHiddenSb">prefersStatusBarHidden</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>True if the status bar should be hidden or false if it should be shown.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">prefersStatusBarHidden</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic) BOOL prefersStatusBarHidden;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView14statusBarStyleOSC16UIStatusBarStyle"></a>
+              <a name="//apple_ref/swift/Property/statusBarStyle" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView14statusBarStyleOSC16UIStatusBarStyle">statusBarStyle</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>The style of the device’s status bar.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">statusBarStyle</span><span class="p">:</span> <span class="kt">UIStatusBarStyle</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic) UIStatusBarStyle statusBarStyle;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView6topBarCS_8TCUIView"></a>
+              <a name="//apple_ref/swift/Property/topBar" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView6topBarCS_8TCUIView">topBar</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Top bar of TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">topBar</span><span class="p">:</span> <span class="kt"><a href="../Classes/TCUIView.html">TCUIView</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) TCUIView * _Nonnull topBar;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView9bottomBarCS_8TCUIView"></a>
+              <a name="//apple_ref/swift/Property/bottomBar" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView9bottomBarCS_8TCUIView">bottomBar</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Bottom bar of TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">bottomBar</span><span class="p">:</span> <span class="kt"><a href="../Classes/TCUIView.html">TCUIView</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) TCUIView * _Nonnull bottomBar;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView9toolPanelCS_8TCUIView"></a>
+              <a name="//apple_ref/swift/Property/toolPanel" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView9toolPanelCS_8TCUIView">toolPanel</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Tool panel of TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">toolPanel</span><span class="p">:</span> <span class="kt"><a href="../Classes/TCUIView.html">TCUIView</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) TCUIView * _Nonnull toolPanel;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView11settingViewCS_8TCUIView"></a>
+              <a name="//apple_ref/swift/Property/settingView" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView11settingViewCS_8TCUIView">settingView</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Setting view of TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">settingView</span><span class="p">:</span> <span class="kt"><a href="../Classes/TCUIView.html">TCUIView</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) TCUIView * _Nonnull settingView;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView9imageViewCS_8TCUIView"></a>
+              <a name="//apple_ref/swift/Property/imageView" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView9imageViewCS_8TCUIView">imageView</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Image view of TCMaskView</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="k">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt"><a href="../Classes/TCUIView.html">TCUIView</a></span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, strong) TCUIView * _Nonnull imageView;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+	<li class="item">
+          <div>
+            <code>
+              <a name="/s:vC6TCMask10TCMaskView11testDevicesGSaSS_"></a>
+              <a name="//apple_ref/swift/Property/testDevices" class="dashAnchor"></a>
+              <a class="token" href="#/s:vC6TCMask10TCMaskView11testDevicesGSaSS_">testDevices</a>
+            </code>
+          </div>
+          <div class="height-container" style="display: none;">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Devices IDs for development</p>
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">testDevices</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">@property (nonatomic, copy) NSArray<NSString *> * _Nonnull testDevices;;</span></code></pre>
+		</div>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskView11presentFromFT18rootViewControllerCSo16UIViewController8animatedSb_T_"></a>
+              <a name="//apple_ref/swift/Method/presentFrom(rootViewController:animated:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskView11presentFromFT18rootViewControllerCSo16UIViewController8animatedSb_T_">presentFrom(rootViewController:animated:)</a>
+            </code>
+          </div>
+          <div class="height-container"">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Presents the TCMaskView controller modally, which takes over the entire screen until the user closes or completes it.</p>
+
+		<p>Set rootViewController to the current view controller at the time this method is called.</p>
+
+		<p><strong>Delegates:</strong></p>
+
+		<p>tcMaskViewDidExit: is called before TCMaskView is about to exit</p>
+
+		<p>tcMaskViewDidComplete: is called before TCMaskView is about to complete</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">presentFrom</span><span class="p">(</span><span class="nv">rootViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (void)presentFromRootViewController:(UIViewController * _Nonnull)rootViewController animated:(BOOL)animated;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Parameters</h4>
+                <table class="graybox">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>rootViewController</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>The root view controller from which TCMaskView controller is presented</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>animated</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Specify true to animate the transition or false if you do not want the transition to be animated.</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </li>
+	<li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskView11presentFromFT20navigationControllerCSo22UINavigationController8animatedSb_T_"></a>
+              <a name="//apple_ref/swift/Method/presentFrom(navigationController:animated:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskView11presentFromFT20navigationControllerCSo22UINavigationController8animatedSb_T_">presentFrom(navigationController:animated:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Pushes a TCMaskView controller onto the navigationController’s stack and updates the display.</p>
+
+		<p>TCMaskView becomes the top view controller on the navigation stack. Pushing a view controller causes its view to be embedded in the navigation interface. If the animated parameter is true, the view is animated into position; otherwise, the view is simply displayed in its final location.</p>
+
+		<p>In addition to displaying the view associated with the new view controller at the top of the stack, this method also updates the navigation bar and tool bar accordingly. For information on how the navigation bar is updated, see Updating the Navigation Bar.</p>
+
+		<p><strong>Delegates:</strong></p>
+
+		<p>tcMaskViewDidExit: is called before TCMaskView is about to exit</p>
+
+		<p>tcMaskViewDidComplete: is called before TCMaskView is about to complete</p>
+
+		<p>tcMaskViewWillPushViewController: is called before navigation controller is about to accomplish TCMaskView and process to the next UIViewController</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">presentFrom</span><span class="p">(</span><span class="nv">navigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (void)presentFromNavigationController:(UINavigationController * _Nonnull)navigationController animated:(BOOL)animated;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Parameters</h4>
+                <table class="graybox">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>navigationController</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>UINavigationController onto which TCMaskView is pushed</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>animated</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Specify true to animate the transition or false if you do not want the transition to be animated.</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskView14setInitialMaskFVs5UInt8T_"></a>
+              <a name="//apple_ref/swift/Method/setInitialMask(_:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskView14setInitialMaskFVs5UInt8T_">setInitialMask(_:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Set the initial mask value of TCMaksView.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setInitialMask</span><span class="p">(</span><span class="n">_</span> <span class="nv">mask</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (void)setInitialMaskWithValue:(uint8_t)mask;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Parameters</h4>
+                <table class="graybox">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>mask</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Initial mask value, the entire initial mask will be filled with this value</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskView14setInitialMaskFGSaVs5UInt8_T_"></a>
+              <a name="//apple_ref/swift/Method/setInitialMask(_:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskView14setInitialMaskFGSaVs5UInt8_T_">setInitialMask(_:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Set the initial mask value of TCMaksView.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setInitialMask</span><span class="p">(</span><span class="n">_</span> <span class="nv">mask</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">])</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (void)setInitialMaskWithArray:(NSArray<NSNumber *> * _Nonnull)mask;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Parameters</h4>
+                <table class="graybox">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>mask</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Initial mask value, mask length should match TCMaskView image size (mask.count == image.size.width * image.size.height)</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </li>
+        <li class="item">
+          <div>
+            <code>
+              <a name="/s:FC6TCMask10TCMaskView14setInitialMaskFTGSaVs5UInt8_4sizeVSC6CGSize_T_"></a>
+              <a name="//apple_ref/swift/Method/setInitialMask(_:size:)" class="dashAnchor"></a>
+              <a class="token" href="#/s:FC6TCMask10TCMaskView14setInitialMaskFTGSaVs5UInt8_4sizeVSC6CGSize_T_">setInitialMask(_:size:)</a>
+            </code>
+          </div>
+          <div class="height-container">
+            <div class="pointer-container"></div>
+            <section class="section">
+              <div class="pointer"></div>
+              <div class="abstract">
+                <p>Set the initial mask value of TCMaksView.</p>
+
+              </div>
+              <div class="declaration">
+                <h4>Declaration</h4>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setInitialMask</span><span class="p">(</span><span class="n">_</span> <span class="nv">mask</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">],</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+                </div>
+		<div class="language">
+		  <p class="aside-title">Objective-C</p>
+		  <pre class="highlight"><code><span class="p">- (void)setInitialMask:(NSArray<NSNumber *> * _Nonnull)mask size:(CGSize)size;</span></code></pre>
+		</div>
+              </div>
+              <div>
+                <h4>Parameters</h4>
+                <table class="graybox">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>mask</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Initial mask value</p>
+
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>
+                          <em>size</em>
+                        </code>
+                      </td>
+                      <td>
+                        <div>
+                          <p>Size of mask, mask length should match size (mask.count == size.width * size.height), if size is not the same as image size, the initial mask will be scalled to fit image size.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </article>
+</div>
+
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="footer-links clearfix">
+	  <div class="link col-sm-4">
+            <a href="/contact-support.html">Contact Support</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+	  </div>
+	  <div class="link col-sm-4">
+            <a href="/terms-of-use.html">Terms of Use</a>
+          </div>
+	</div>
+	<p class="copyright">Copyright © 2017 TinyCrayon. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="/js/index.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39532290-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    
+<script src="/js/jazzy.js"></script>
+
+  </body>
+</html>
