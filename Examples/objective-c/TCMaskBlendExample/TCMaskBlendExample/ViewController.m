@@ -122,7 +122,7 @@
 // create a UIImage with solid color
 - (id)initWithUIColor:(UIColor*)color size:(CGSize)size {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0);
+    UIGraphicsBeginImageContextWithOptions(rect.size, false, 1.0);
     [color setFill];
     UIRectFill(rect);
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();

@@ -14,7 +14,26 @@
 		750E146C1E51DB780057E0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750E146B1E51DB780057E0D0 /* Assets.xcassets */; };
 		750E146F1E51DB780057E0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750E146D1E51DB780057E0D0 /* LaunchScreen.storyboard */; };
 		750E147E1E51DD410057E0D0 /* Balloon.JPEG in Resources */ = {isa = PBXBuildFile; fileRef = 750E147D1E51DD410057E0D0 /* Balloon.JPEG */; };
+		7527FE96270C87DD00710086 /* TCMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FE92270C87D300710086 /* TCMask.framework */; };
+		7527FE97270C87DD00710086 /* TCMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FE92270C87D300710086 /* TCMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7527FE91270C87D300710086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7527FE8C270C87D300710086 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDA6270BED5700710086;
+			remoteInfo = TCMask;
+		};
+		7527FE93270C87D300710086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7527FE8C270C87D300710086 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDC5270BEEA700710086;
+			remoteInfo = TCCore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		75B5CA7F1FB36E6100E078C0 /* Embed Frameworks */ = {
@@ -23,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7527FE97270C87DD00710086 /* TCMask.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +61,7 @@
 		750E146E1E51DB780057E0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		750E14701E51DB780057E0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		750E147D1E51DD410057E0D0 /* Balloon.JPEG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Balloon.JPEG; sourceTree = "<group>"; };
+		7527FE8C270C87D300710086 /* TinyCrayon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyCrayon.xcodeproj; path = ../../../TinyCrayon.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7527FE96270C87DD00710086 /* TCMask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +79,10 @@
 		750E14531E51DB780057E0D0 = {
 			isa = PBXGroup;
 			children = (
+				7527FE8C270C87D300710086 /* TinyCrayon.xcodeproj */,
 				750E145E1E51DB780057E0D0 /* TCMaskCustomization */,
 				750E145D1E51DB780057E0D0 /* Products */,
+				7527FE95270C87DD00710086 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +117,22 @@
 				750E14601E51DB780057E0D0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7527FE8D270C87D300710086 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7527FE92270C87D300710086 /* TCMask.framework */,
+				7527FE94270C87D300710086 /* TCCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7527FE95270C87DD00710086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,18 +176,42 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 750E14531E51DB780057E0D0;
 			productRefGroup = 750E145D1E51DB780057E0D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7527FE8D270C87D300710086 /* Products */;
+					ProjectRef = 7527FE8C270C87D300710086 /* TinyCrayon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				750E145B1E51DB780057E0D0 /* TCMaskCustomization */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7527FE92270C87D300710086 /* TCMask.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCMask.framework;
+			remoteRef = 7527FE91270C87D300710086 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7527FE94270C87D300710086 /* TCCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCCore.framework;
+			remoteRef = 7527FE93270C87D300710086 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		750E145A1E51DB780057E0D0 /* Resources */ = {

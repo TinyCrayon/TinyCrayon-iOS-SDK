@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7527FEE1270C8EE400710086 /* TCMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FEDD270C8EDF00710086 /* TCMask.framework */; };
+		7527FEE2270C8EE400710086 /* TCMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FEDD270C8EDF00710086 /* TCMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7532280F1E3B3CD900A0BDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532280E1E3B3CD900A0BDAF /* AppDelegate.swift */; };
 		753228111E3B3CD900A0BDAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753228101E3B3CD900A0BDAF /* ViewController.swift */; };
 		753228141E3B3CD900A0BDAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753228121E3B3CD900A0BDAF /* Main.storyboard */; };
@@ -15,6 +17,23 @@
 		753228211E3B3CE800A0BDAF /* Balloon.JPEG in Resources */ = {isa = PBXBuildFile; fileRef = 753228201E3B3CE800A0BDAF /* Balloon.JPEG */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7527FEDC270C8EDF00710086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDA6270BED5700710086;
+			remoteInfo = TCMask;
+		};
+		7527FEDE270C8EDF00710086 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7527FDC5270BEEA700710086;
+			remoteInfo = TCCore;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		75B5CA2A1FB3360200E078C0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -22,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7527FEE2270C8EE400710086 /* TCMask.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyCrayon.xcodeproj; path = ../../../TinyCrayon.xcodeproj; sourceTree = "<group>"; };
 		7532280B1E3B3CD900A0BDAF /* TCMaskPopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCMaskPopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7532280E1E3B3CD900A0BDAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		753228101E3B3CD900A0BDAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,17 +65,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7527FEE1270C8EE400710086 /* TCMask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7527FED8270C8EDF00710086 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7527FEDD270C8EDF00710086 /* TCMask.framework */,
+				7527FEDF270C8EDF00710086 /* TCCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7527FEE0270C8EE400710086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		753228021E3B3CD900A0BDAF = {
 			isa = PBXGroup;
 			children = (
+				7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */,
 				7532280D1E3B3CD900A0BDAF /* TCMaskPopView */,
 				7532280C1E3B3CD900A0BDAF /* Products */,
+				7527FEE0270C8EE400710086 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,18 +163,42 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 753228021E3B3CD900A0BDAF;
 			productRefGroup = 7532280C1E3B3CD900A0BDAF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7527FED8270C8EDF00710086 /* Products */;
+					ProjectRef = 7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7532280A1E3B3CD900A0BDAF /* TCMaskPopView */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7527FEDD270C8EDF00710086 /* TCMask.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCMask.framework;
+			remoteRef = 7527FEDC270C8EDF00710086 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7527FEDF270C8EDF00710086 /* TCCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TCCore.framework;
+			remoteRef = 7527FEDE270C8EDF00710086 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		753228091E3B3CD900A0BDAF /* Resources */ = {
