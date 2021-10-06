@@ -6,7 +6,7 @@
 //
 //
 
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 #include "GlobalMatting.hpp"
 using namespace cv;
 

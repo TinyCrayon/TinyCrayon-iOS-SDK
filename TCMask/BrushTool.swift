@@ -20,7 +20,7 @@ class BrushTool : Tool {
         imgSize = maskView.image.size
         
         previousAlpha = [UInt8](repeating: 0, count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
     }
     
     override func refresh() {
@@ -28,8 +28,8 @@ class BrushTool : Tool {
     }
     
     override func invert() {
-        TCOpenCV.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
         refresh()
     }
     
@@ -51,7 +51,7 @@ class BrushTool : Tool {
     
     override func touchEnded(_ previousLocation: CGPoint, _ location: CGPoint) {
         toolManager.pushLogOfBrush(previousAlpha: previousAlpha, currentAlpha: maskView.opacity)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
         notifyDidEndProcessing()
     }
     
@@ -60,7 +60,7 @@ class BrushTool : Tool {
         let endRadius = maskView.lineWidth(scribbleSize: params.brushSize)  / 2
         let startRadius = endRadius * params.brushHardness
         var outRect = CGRect()
-        if (TCOpenCV.drawRadialGradient(onAlpha: &maskView.opacity, size: imgSize, center: center * maskView.scaleFactor, startValue: UInt8(params.brushOpacity * params.brushOpacity * 255), startRadius: startRadius, endValue: 0, endRadius: endRadius, outRect: &outRect, add: params.add))
+        if (TCCore.drawRadialGradient(onAlpha: &maskView.opacity, size: imgSize, center: center * maskView.scaleFactor, startValue: UInt8(params.brushOpacity * params.brushOpacity * 255), startRadius: startRadius, endValue: 0, endRadius: endRadius, outRect: &outRect, add: params.add))
         {
             maskView.refresh(outRect)
         }

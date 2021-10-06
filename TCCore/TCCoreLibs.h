@@ -1,13 +1,13 @@
 //
-//  OpenCVLibs.h
+//  TCCoreLibs.h
 //  TinyCrayon
 //
 //  Created by Xin Zeng on 11/8/15.
 //  Copyright © 2015 Xin Zeng. All rights reserved.
 //
 
-#ifndef OpenCVLibs_h
-#define OpenCVLibs_h
+#ifndef TCCoreLibs_h
+#define TCCoreLibs_h
 
 #define GC_MASK_BGD            0
 #define GC_MASK_PR_BGD         1
@@ -36,4 +36,4 @@
 #define GM_UNINIT            192
 #define GM_FGD               255
 
-#endif /* OpenCVLibs_h */
+#endif /* TCCoreLibs_h */

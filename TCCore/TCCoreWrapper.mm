@@ -1,5 +1,5 @@
 //
-//  TCOpenCVWrapper.m
+//  TCCoreWrapper.m
 //  TinyCrayon
 //
 //  Created by Xin Zeng on 10/31/15.
@@ -9,14 +9,14 @@
 #import <opencv2/opencv.hpp>
 #import <UIKit/UIKit.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import "TCOpenCVWrapper.h"
+#import "TCCoreWrapper.h"
 
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 #include "improc.hpp"
 #include "GlobalMatting.hpp"
 #include "GuidedFilter.hpp"
 
-@implementation TCOpenCV
+@implementation TCCore
 
 +(void) rectcpy:(uchar *)dst src:(const uchar *)src srcSize:(CGSize)srcSize rect:(CGRect)rect {
     cv::Point p;

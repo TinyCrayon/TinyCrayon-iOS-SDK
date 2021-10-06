@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char TCCoreVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TCCore/PublicHeader.h>
 
 
-#import "TCOpenCVWrapper.h"
+#import "TCCoreWrapper.h"

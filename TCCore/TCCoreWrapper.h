@@ -1,21 +1,21 @@
 //
-//  TCOpenCVWrapper.h
+//  TCCoreWrapper.h
 //  TinyCrayon
 //
 //  Created by Xin Zeng on 10/31/15.
 //  Copyright © 2015 Xin Zeng. All rights reserved.
 //
 
-#ifndef TCOpenCVWrapper_h
-#define TCOpenCVWrapper_h
+#ifndef TCCoreWrapper_h
+#define TCCoreWrapper_h
 
 #import <UIKit/UIKit.h>
-#import "OpenCVLibs.h"
+#import "TCCoreLibs.h"
 
 typedef unsigned char uchar;
 typedef unsigned short ushort;
 
-@interface TCOpenCV : NSObject {
+@interface TCCore : NSObject {
     
 }
 
@@ -68,4 +68,4 @@ typedef unsigned short ushort;
 @end
 
 
-#endif /* TCOpenCVWrapper_h */
+#endif /* TCCoreWrapper_h */

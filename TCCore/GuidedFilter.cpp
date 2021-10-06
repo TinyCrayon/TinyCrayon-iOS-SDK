@@ -6,7 +6,7 @@
 //  Copyright © 2016 Xin Zeng. All rights reserved.
 //
 
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 #include "GuidedFilter.hpp"
 
 static cv::Mat boxfilter(const cv::Mat &I, int r)

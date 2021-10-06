@@ -37,7 +37,7 @@ class ToolManager {
         var completed = false
         
         while !completed {
-            completed = TCOpenCV.logEncodeDiff(from: from, to: to, count: to.count, buf: &buf, bufLen: Int32(buf.count), processed: &processed, offset: &offset)
+            completed = TCCore.logEncodeDiff(from: from, to: to, count: to.count, buf: &buf, bufLen: Int32(buf.count), processed: &processed, offset: &offset)
             diff.append(contentsOf: buf[0..<Int(processed)])
         }
         
@@ -52,7 +52,7 @@ class ToolManager {
         var completed = false
         
         while !completed {
-            completed = TCOpenCV.logEncodeArray(array, count: array.count, buf: &buf, bufLen: Int32(buf.count), processed: &processed, offset: &offset)
+            completed = TCCore.logEncodeArray(array, count: array.count, buf: &buf, bufLen: Int32(buf.count), processed: &processed, offset: &offset)
             encoded.append(contentsOf: buf[0..<Int(processed)])
         }
         
@@ -252,9 +252,9 @@ class ToolManager {
                     // nothing to do
                 }
                 
-                TCOpenCV.logDecodeArray(&qstool.mask, encoded: log.encodedMask, decodedCount: qstool.mask.count, encodedCount: log.encodedMask.count)
-                TCOpenCV.logDecodeArray(&maskView.opacity, encoded: log.encodedAlpha, decodedCount: maskView.opacity.count, encodedCount: log.encodedAlpha.count)
-                TCOpenCV.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
+                TCCore.logDecodeArray(&qstool.mask, encoded: log.encodedMask, decodedCount: qstool.mask.count, encodedCount: log.encodedMask.count)
+                TCCore.logDecodeArray(&maskView.opacity, encoded: log.encodedAlpha, decodedCount: maskView.opacity.count, encodedCount: log.encodedAlpha.count)
+                TCCore.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
                 log.encodedAlpha = nil
                 log.encodedMask = nil
             }

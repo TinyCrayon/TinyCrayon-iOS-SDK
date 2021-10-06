@@ -24,7 +24,7 @@ class HairBrushTool : Tool {
         self.imgSize = maskView.image.size
 
         previousAlpha = [UInt8](repeating: 0, count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
         
         activeRegion = [UInt8](repeating: UInt8(GM_UNINIT), count: maskView.opacity.count)
         regionContext = CGContext(data: &activeRegion, width: Int(imgSize.width), height: Int(imgSize.height), bitsPerComponent: 8, bytesPerRow: Int(imgSize.width), space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGImageAlphaInfo.alphaOnly.rawValue)!
@@ -43,8 +43,8 @@ class HairBrushTool : Tool {
     }
     
     override func invert() {
-        TCOpenCV.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
         refresh()
     }
     
@@ -66,8 +66,8 @@ class HairBrushTool : Tool {
         let paintColor = UIColor(white: 0, alpha: CGFloat(params.add ? GM_FGD : GM_BGD) / 255.0)
         _ = CGContextDrawLine(regionContext, p1: p1, p2: p2, lineWidth: lineWidth / 2, color: paintColor.cgColor)
         
-        if (TCOpenCV.imageFiltering(self.maskView.imageData, size: imgSize, alpha: &maskView.opacity, region: activeRegion, rect: rect, add: params.add)) {
-            let mattingImage = TCOpenCV.image(fromAlpha: maskView.opacity, size: imgSize, rect: rect)!
+        if (TCCore.imageFiltering(self.maskView.imageData, size: imgSize, alpha: &maskView.opacity, region: activeRegion, rect: rect, add: params.add)) {
+            let mattingImage = TCCore.image(fromAlpha: maskView.opacity, size: imgSize, rect: rect)!
             maskView.drawImgToCache(mattingImage, rect: rect)
             sessionPoints.append((p1, p2, lineWidth))
         }
@@ -82,7 +82,7 @@ class HairBrushTool : Tool {
     
     override func notifyDidEndProcessing() {
         toolManager.pushLogOfHairBrush(previousAlpha: previousAlpha, currentAlpha: maskView.opacity)
-        TCOpenCV.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
+        TCCore.arrayCopy(&previousAlpha, src: maskView.opacity, count: previousAlpha.count)
         super.notifyDidEndProcessing()
     }
 }

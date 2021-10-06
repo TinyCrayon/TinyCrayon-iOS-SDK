@@ -46,7 +46,7 @@ open class TCMask : NSObject {
      - returns: RGBA image converted from mask, with the alpha info of premultiplied last. If a pixel value of mask is v, the corrosponding pixel value of returned RGBA image is (v, v, v, v)
      */
     open func rgbaImage() -> UIImage {
-        return TCOpenCV.image(fromAlpha: data, size: size)
+        return TCCore.image(fromAlpha: data, size: size)
     }
     
     /**
@@ -54,7 +54,7 @@ open class TCMask : NSObject {
      */
     open func inverted() -> TCMask {
         var invertedData = [UInt8](repeating: 0, count: data.count)
-        TCOpenCV.invertAlpha(&invertedData, count: invertedData.count)
+        TCCore.invertAlpha(&invertedData, count: invertedData.count)
         return TCMask(data: invertedData, size: size)
     }
     
@@ -83,7 +83,7 @@ open class TCMask : NSObject {
     open func cutout(image: UIImage, resize: Bool, outputRect: inout CGRect) -> UIImage? {
         assert(image.size == self.size, "image size is not equal to mask size")
         var offset = CGPoint()
-        let retval = TCOpenCV.image(withAlpha: image.normalize(), alpha: data, compact: resize, offset: &offset)
+        let retval = TCCore.image(withAlpha: image.normalize(), alpha: data, compact: resize, offset: &offset)
         if retval == nil {
             outputRect = CGRect()
         }

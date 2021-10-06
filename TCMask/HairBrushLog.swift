@@ -38,8 +38,8 @@ class HairBrushLog : ToolLog {
             hbtool.invert()
         }
         else {
-            TCOpenCV.logDecodeDiff(to: &hbtool.maskView.opacity, from: hbtool.maskView.opacity, diff: diff, count: hbtool.maskView.opacity.count, diffCount: diff.count)
-            TCOpenCV.arrayCopy(&hbtool.previousAlpha, src: hbtool.maskView.opacity, count: hbtool.previousAlpha.count)
+            TCCore.logDecodeDiff(to: &hbtool.maskView.opacity, from: hbtool.maskView.opacity, diff: diff, count: hbtool.maskView.opacity.count, diffCount: diff.count)
+            TCCore.arrayCopy(&hbtool.previousAlpha, src: hbtool.maskView.opacity, count: hbtool.previousAlpha.count)
         }
         
         idx -= 1
@@ -56,8 +56,8 @@ class HairBrushLog : ToolLog {
             hbtool.invert()
         }
         else {
-            TCOpenCV.logDecodeDiff(to: &hbtool.maskView.opacity, from: hbtool.maskView.opacity, diff: diff, count: hbtool.maskView.opacity.count, diffCount: diff.count)
-            TCOpenCV.arrayCopy(&hbtool.previousAlpha, src: hbtool.maskView.opacity, count: hbtool.previousAlpha.count)
+            TCCore.logDecodeDiff(to: &hbtool.maskView.opacity, from: hbtool.maskView.opacity, diff: diff, count: hbtool.maskView.opacity.count, diffCount: diff.count)
+            TCCore.arrayCopy(&hbtool.previousAlpha, src: hbtool.maskView.opacity, count: hbtool.previousAlpha.count)
         }
     }
     

@@ -267,7 +267,7 @@ class MaskViewController: UIViewController, UITabBarDelegate, MaskViewDelegate, 
                 maskView.opacity = initialMaskArray
             }
             else {
-                TCOpenCV.arrayResize(&maskView.opacity, src: initialMaskArray!, dstSize: image.size, srcSize: initialMaskSize)
+                TCCore.arrayResize(&maskView.opacity, src: initialMaskArray!, dstSize: image.size, srcSize: initialMaskSize)
             }
         }
         maskView.refresh()

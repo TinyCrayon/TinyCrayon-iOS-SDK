@@ -165,7 +165,7 @@ class MaskView : UIView {
     
     func refresh(_ rect: CGRect) {
         let r = CGRect(x: max(rect.origin.x, 0), y: max(rect.origin.y, 0), width: min(rect.size.width, image.size.width), height: min(rect.size.height, image.size.height))
-        let redrawImage = TCOpenCV.image(fromAlpha: self.opacity, size: self.image.size, rect: r)
+        let redrawImage = TCCore.image(fromAlpha: self.opacity, size: self.image.size, rect: r)
         drawImgToCache(redrawImage!, rect: r)
     }
     
@@ -176,7 +176,7 @@ class MaskView : UIView {
     // MARK: - output
     func getAlpha(_ size: CGSize) -> [UInt8] {
         var retval = [UInt8](repeating: 0, count: Int(size.width * size.height))
-        TCOpenCV.arrayResize(&retval, src: self.opacity, dstSize: size, srcSize: size)
+        TCCore.arrayResize(&retval, src: self.opacity, dstSize: size, srcSize: size)
         return retval
     }
     
@@ -184,7 +184,7 @@ class MaskView : UIView {
         if (!shouldForceSelect) {
             return true
         }
-        return !TCOpenCV.arrayCheckAll(opacity, value: 0, count: opacity.count)
+        return !TCCore.arrayCheckAll(opacity, value: 0, count: opacity.count)
     }
     
     func lineWidth(scribbleSize: CGFloat) -> CGFloat {
@@ -193,7 +193,7 @@ class MaskView : UIView {
     
     func resizedOpacity(size: CGSize) -> [UInt8] {
         var retval = [UInt8](repeating: 0, count: Int(size.width * size.height))
-        TCOpenCV.arrayResize(&retval, src: self.opacity, dstSize: size, srcSize: image.size)
+        TCCore.arrayResize(&retval, src: self.opacity, dstSize: size, srcSize: image.size)
         return retval
     }
 }

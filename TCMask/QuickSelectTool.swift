@@ -33,29 +33,29 @@ class QuickSelectTool : Tool {
 
         // allocate memory space for mask
         self.mask = [UInt8](repeating: UInt8(GC_MASK_PR_BGD), count: maskView.opacity.count)
-        TCOpenCV.mask(fromAlpha: maskView.opacity, mask: &mask, size: image.size)
+        TCCore.mask(fromAlpha: maskView.opacity, mask: &mask, size: image.size)
         
         // allocate memory space for previous mask using for undo-redo log
         self.previousMask = [UInt8](repeating: UInt8(GC_MASK_PR_BGD), count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousMask, src: mask, count: mask.count)
+        TCCore.arrayCopy(&previousMask, src: mask, count: mask.count)
     }
     
     override func refresh() {        
-        let redrawImage = TCOpenCV.image(fromMask: self.mask, alpha: maskView.opacity, size: image.size, rect: CGRect(origin: CGPoint(), size: image.size))
+        let redrawImage = TCCore.image(fromMask: self.mask, alpha: maskView.opacity, size: image.size, rect: CGRect(origin: CGPoint(), size: image.size))
         maskView.drawImgToCache(redrawImage!, rect: CGRect(origin: CGPoint(), size: image.size))
     }
     
     override func invert() {
         if (isSelectRunning) { return }
         
-        TCOpenCV.invertMask(&self.mask, count: self.mask.count)
-        TCOpenCV.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
-        TCOpenCV.arrayCopy(&previousMask, src: mask, count: mask.count)
+        TCCore.invertMask(&self.mask, count: self.mask.count)
+        TCCore.invertAlpha(&maskView.opacity, count: maskView.opacity.count)
+        TCCore.arrayCopy(&previousMask, src: mask, count: mask.count)
         refresh()
     }
     
     override func endProcessing() {
-        TCOpenCV.alpha(fromMask: mask, alpha: &maskView.opacity, size: image.size)
+        TCCore.alpha(fromMask: mask, alpha: &maskView.opacity, size: image.size)
     }
     
     override func touchBegan(_ location: CGPoint) {
@@ -120,7 +120,7 @@ class QuickSelectTool : Tool {
     func selectDidEnd() {
         if self.needToPushLog {
             toolManager.pushLogOfQuickSelect(previousMask: previousMask, currentMask: mask)
-            TCOpenCV.arrayCopy(&previousMask, src: mask, count: mask.count)
+            TCCore.arrayCopy(&previousMask, src: mask, count: mask.count)
             self.needToPushLog = false
         }
         
@@ -168,8 +168,8 @@ class QuickSelectTool : Tool {
 
             assert(segRect != nil)
             
-            if (TCOpenCV.imageSelect(self.maskView.imageData, size:self.image.size, mask: &self.mask, region: activeRegion, opacity: &self.maskView.opacity, mode: Int(segMode), edgeDetection:true, rect: segRect!, outRect: &outRect)){
-                segImage = TCOpenCV.image(fromMask: self.mask, alpha:self.maskView.opacity, size: self.image.size, rect: outRect)
+            if (TCCore.imageSelect(self.maskView.imageData, size:self.image.size, mask: &self.mask, region: activeRegion, opacity: &self.maskView.opacity, mode: Int(segMode), edgeDetection:true, rect: segRect!, outRect: &outRect)){
+                segImage = TCCore.image(fromMask: self.mask, alpha:self.maskView.opacity, size: self.image.size, rect: outRect)
                 self.needToPushLog = true
             }
             else {

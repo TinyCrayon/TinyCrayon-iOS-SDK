@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <ctime>
 #include "improc.hpp"
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 #include "PaintSelect.hpp"
 #include "GlobalMatting.hpp"
 #include "GuidedFilter.hpp"

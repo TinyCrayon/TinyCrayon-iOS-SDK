@@ -7,7 +7,7 @@
 //
 
 #include "QuickGraphCut.hpp"
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 #include <limits>
 #include <ctime>
 #include <math.h>

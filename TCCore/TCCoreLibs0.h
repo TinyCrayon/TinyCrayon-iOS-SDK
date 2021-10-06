@@ -1,15 +1,15 @@
 //
-//  OpenCVLibs0.h
+//  TCCoreLibs0.h
 //  TinyCrayon
 //
 //  Created by Xin Zeng on 1/2/17.
 //
 //
 
-#ifndef OpenCVLibs0_h
-#define OpenCVLibs0_h
+#ifndef TCCoreLibs0_h
+#define TCCoreLibs0_h
 
-#include "OpenCVLibs.h"
+#include "TCCoreLibs.h"
 
 #define TC_ASSERT(_exp, _msg, ...) do {                \
 if (!(_exp)) { printf(_msg, ##__VA_ARGS__);            \
@@ -64,4 +64,4 @@ for (int _i = 0; _i < (_cnt); _i++)                                        \
 
 #define MATTING_RADIUS        8
 
-#endif /* OpenCVLibs0_h */
+#endif /* TCCoreLibs0_h */

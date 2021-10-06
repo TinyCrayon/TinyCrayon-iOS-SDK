@@ -12,7 +12,7 @@
 #import <opencv2/opencv.hpp>
 
 #include <stdio.h>
-#include "OpenCVLibs0.h"
+#include "TCCoreLibs0.h"
 
 using namespace cv;
 

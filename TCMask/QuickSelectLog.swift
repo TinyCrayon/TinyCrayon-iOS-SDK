@@ -45,8 +45,8 @@ class QuickSelectLog : ToolLog {
             qstool.invert()
         }
         else {
-            TCOpenCV.logDecodeDiff(to: &qstool.mask, from: qstool.mask, diff: diff, count: qstool.mask.count, diffCount: diff.count)
-            TCOpenCV.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
+            TCCore.logDecodeDiff(to: &qstool.mask, from: qstool.mask, diff: diff, count: qstool.mask.count, diffCount: diff.count)
+            TCCore.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
         }
         idx -= 1
     }
@@ -65,8 +65,8 @@ class QuickSelectLog : ToolLog {
             qstool.invert()
         }
         else {
-            TCOpenCV.logDecodeDiff(to: &qstool.mask, from: qstool.mask, diff: diff, count: qstool.mask.count, diffCount: diff.count)
-            TCOpenCV.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
+            TCCore.logDecodeDiff(to: &qstool.mask, from: qstool.mask, diff: diff, count: qstool.mask.count, diffCount: diff.count)
+            TCCore.arrayCopy(&qstool.previousMask, src: qstool.mask, count: qstool.mask.count)
         }        
     }
     
