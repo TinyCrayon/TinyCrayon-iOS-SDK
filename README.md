@@ -1,7 +1,6 @@
 # TinyCrayon SDK for iOS
 > A smart and easy-to-use image masking and cutout SDK for mobile apps.
 
-[![Website](https://img.shields.io/website/https/www.tinycrayon.com.svg)](https://www.tinycrayon.com/)
 [![platform](https://img.shields.io/cocoapods/p/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![Compatible](https://img.shields.io/badge/compatible-Swift%20%2F%20Objective--C%20-yellow.svg)](https://cocoapods.org/pods/TinyCrayon)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TinyCrayon.svg)](https://cocoapods.org/pods/TinyCrayon)
@@ -15,7 +14,6 @@ TinyCrayon SDK provides tools for adding image cutout and layer mask capabilitie
 ------------ | -------------
 Quick Select Tool | Hair Brush Tool
 
-Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
 
 ## Table of Contents
 
@@ -45,9 +43,6 @@ The current version of TinyCrayon SDK provides the following three tools:
 * Hair Brush: Smooth and natual looking, paint on the hair/fur of an object and the algorithm will select the hair/fur for you in high quality.
 * Regular Brush: A regular brush tool with the capability to adjust its size, hardness and opacity.
 
-## Notes
-* __No Ads__: From 5.0.1 and later versions, ads have been removed from the SDK.
-* __UI customization__: We are reorganizing the code now and will open source the swift code in the future, you will be able to customize your UI at that time.
 
 ## Features
 * Free: TinyCrayon SDK is provided under MIT license, you can use it in your commercial applications for free!
@@ -63,39 +58,12 @@ The current version of TinyCrayon SDK provides the following three tools:
 ### Prerequisites
 * Xcode 9.0 or later.
 * A physical iOS device.
-* Recommended: [installation of CocoaPods](http://guides.cocoapods.org/using/getting-started) to simplify dependency management.
 
-### Streamlined, using CocoaPods
-TinyCrayon SDK is available via CocoaPods. If you're new to CocoaPods, this [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html) will help you. CocoaPods is the preferred and simplest way to use the TinyCrayon SDK.
-
-**Important:** Please make sure that you have a CocoaPods version >= 0.39.0 installed. You can check your version of CocoaPods with `pod --version`.
-
-Here's what you have to add to your `Podfile` (if you do not have `Podfile`, create one in your project root directory):
-
-```
-target 'MyApp' do
-  pod 'TinyCrayon'
-end
-```
-
-Then run `pod install` in your project root directory (same directory as your `Podfile`).
-
-Open MyApp.xcworkspace and build.
-
-### Manually, using the SDK download
-If you don't want to use Cocoapods you can still take advantage of the TinyCrayon SDK by importing the frameworks directly.
-
-#### Download the SDK
-
-1. Download the [TinyCrayon SDK zip](https://www.tinycrayon.com/sdk/iOS/TinyCrayon.zip) (this is a ~20MB file and may take some time).
-2. Unzip the TinyCrayon.zip
-
-#### Add the framework
-
-1. Drag `TCCore.framework` into the `Linked Frameworks and Libraries` section of your target.
-2. Drag `TCMask.framework` into the `Embedded Binaries` section of your target.
-
-![Add the framework](https://cloud.githubusercontent.com/assets/4088232/23100618/eef29a52-f6c0-11e6-85ec-a0ea86979cbf.png)
+### Steps
+1. Git clone this repo
+2. Download [OpenCV2](https://opencv.org/releases/) for iOS pack
+3. Unzip opencv-xxx.zip, move *opencv2.framework* to TCCore folder
+4. Open your project, drag *TinyCrayon.xcodeproj* to your workspace, then add *TCMask* to *Frameworks, Libraries, and Embeded Content* in your target->General settings
 
 ### Settings for Objective-C
 
@@ -155,8 +123,7 @@ UIImage *outputImage = [mask cutoutWithImage:image resize:false];
 To try these examples, and find out about more options please take a look at the [Examples](https://github.com/TinyCrayon/TinyCrayon-iOS-SDK/releases).
 
 ## Further reading
-* Try our sample apps [Image Eraser](https://itunes.apple.com/app/id1072712460), [Color Effect](https://itunes.apple.com/app/id1222383759), [Focus Effect](https://itunes.apple.com/app/id1064333794).
-* Check out TinyCrayon [guides](http://tinycrayon.com/guides-iOS/get-started.html) and [API reference](http://tinycrayon.com/docs-iOS/index.html) for more details.
+* Check out TinyCrayon [guides](https://tinycrayon.github.io/TinyCrayon-iOS-SDK/guides-iOS/get-started.html) and [API reference](https://tinycrayon.github.io/TinyCrayon-iOS-SDK/docs-iOS/index.html) for more details.
 
 ## License
 The MIT license
