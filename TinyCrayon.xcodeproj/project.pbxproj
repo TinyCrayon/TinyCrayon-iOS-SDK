@@ -713,7 +713,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 2.0.0;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -756,7 +756,7 @@
 					"@loader_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 2.0.0;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
