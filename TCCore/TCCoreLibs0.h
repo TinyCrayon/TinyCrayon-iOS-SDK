@@ -10,6 +10,7 @@
 #define TCCoreLibs0_h
 
 #include "TCCoreLibs.h"
+#include <opencv2/opencv.hpp>
 
 #define TC_ASSERT(_exp, _msg, ...) do {                \
 if (!(_exp)) { printf(_msg, ##__VA_ARGS__);            \
@@ -63,5 +64,11 @@ for (int _i = 0; _i < (_cnt); _i++)                                        \
 #define GC_ASSERT(_val) TC_ASSERT((_val) < 4, "inv GC value: %d\n", (_val))
 
 #define MATTING_RADIUS        8
+
+#if CV_VERSION_MAJOR > 2
+#define TC_StsBadArg (cv::Error::StsBadArg)
+#else
+#define TC_StsBadArg (CV_StsBadArg)
+#endif
 
 #endif /* TCCoreLibs0_h */

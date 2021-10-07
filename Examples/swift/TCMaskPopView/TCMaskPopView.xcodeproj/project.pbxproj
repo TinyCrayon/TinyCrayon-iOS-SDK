@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7527FEE1270C8EE400710086 /* TCMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FEDD270C8EDF00710086 /* TCMask.framework */; };
-		7527FEE2270C8EE400710086 /* TCMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7527FEDD270C8EDF00710086 /* TCMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7532280F1E3B3CD900A0BDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532280E1E3B3CD900A0BDAF /* AppDelegate.swift */; };
 		753228111E3B3CD900A0BDAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753228101E3B3CD900A0BDAF /* ViewController.swift */; };
 		753228141E3B3CD900A0BDAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753228121E3B3CD900A0BDAF /* Main.storyboard */; };
@@ -33,20 +32,6 @@
 			remoteInfo = TCCore;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		75B5CA2A1FB3360200E078C0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7527FEE2270C8EE400710086 /* TCMask.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7527FED7270C8EDF00710086 /* TinyCrayon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyCrayon.xcodeproj; path = ../../../TinyCrayon.xcodeproj; sourceTree = "<group>"; };
@@ -130,7 +115,6 @@
 				753228071E3B3CD900A0BDAF /* Sources */,
 				753228081E3B3CD900A0BDAF /* Frameworks */,
 				753228091E3B3CD900A0BDAF /* Resources */,
-				75B5CA2A1FB3360200E078C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

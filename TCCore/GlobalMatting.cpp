@@ -317,17 +317,17 @@ void globalMattingHelper(const Mat &image, const Mat &trimap, Mat &alpha, cv::Re
 void globalMatting(const cv::Mat &image, const cv::Mat &trimap, cv::Mat &alpha, cv::Rect rect)
 {
     if (image.empty())
-        CV_Error(cv::Error::StsBadArg, "image is empty");
+        CV_Error(TC_StsBadArg, "image is empty");
     if (image.type() != CV_8UC4)
-        CV_Error(cv::Error::StsBadArg, "image mush have CV_8UC4 type");
+        CV_Error(TC_StsBadArg, "image mush have CV_8UC4 type");
     
     if (trimap.empty())
-        CV_Error(cv::Error::StsBadArg, "trimap is empty");
+        CV_Error(TC_StsBadArg, "trimap is empty");
     if (trimap.type() != CV_8UC1)
-        CV_Error(cv::Error::StsBadArg, "trimap mush have CV_8UC1 type");
+        CV_Error(TC_StsBadArg, "trimap mush have CV_8UC1 type");
     
     if (image.size() != trimap.size())
-        CV_Error(cv::Error::StsBadArg, "image and trimap mush have same size");
+        CV_Error(TC_StsBadArg, "image and trimap mush have same size");
     
     const double limit = 131072;
     cv::Point p;
