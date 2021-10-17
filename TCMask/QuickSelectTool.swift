@@ -172,9 +172,6 @@ class QuickSelectTool : Tool {
                 segImage = TCCore.image(fromMask: self.mask, alpha:self.maskView.opacity, size: self.image.size, rect: outRect)
                 self.needToPushLog = true
             }
-            else {
-                watch.abort()
-            }
             
             DispatchQueue.main.async(execute: {
                 self.isSelectRunning = false
