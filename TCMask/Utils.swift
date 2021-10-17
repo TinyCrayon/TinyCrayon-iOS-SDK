@@ -25,7 +25,9 @@ class StopWatch {
     }
     
     func abort() {
-        self.times.removeLast()
+        if !self.times.isEmpty {
+            self.times.removeLast()
+        }
     }
 }
 
